@@ -1,0 +1,2315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Subash Ravi – SEO, GEO & AEO Specialist helping brands grow through search visibility, AI search optimization, and technical SEO strategies that drive measurable organic growth." />
+  <meta name="keywords" content="SEO Specialist, Technical SEO, GEO Optimization, AEO Optimization, AI Search Optimization, Core Web Vitals, Semantic SEO, Schema Markup, Local SEO" />
+  <meta name="author" content="Subash Ravi" />
+  <meta property="og:title" content="Subash Ravi | SEO · GEO · AEO Specialist" />
+  <meta property="og:description" content="Results-driven SEO specialist helping brands grow organically through AI search visibility, technical SEO, GEO, and AEO optimization strategies." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://subashravi.dev" />
+  <meta property="og:image" content="name.jpg" />
+  <title>Subash Ravi | SEO · GEO · AEO Specialist</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230A0F1E'/><text y='.9em' font-size='80' x='10' fill='%2300D4FF'>S</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- Schema Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Subash Ravi",
+    "jobTitle": "SEO, GEO & AEO Specialist",
+    "url": "https://subashravi.dev",
+    "sameAs": ["https://www.linkedin.com/in/subashravi/"],
+    "knowsAbout": ["Technical SEO", "GEO Optimization", "AEO Optimization", "AI Search Optimization", "Core Web Vitals", "Schema Markup", "Semantic SEO", "Local SEO"]
+  }
+  </script>
+
+<style>
+/* =============================================
+   Subash Ravi – Digital Marketing Portfolio
+   style.css – All Styles
+   ============================================= */
+
+/* ===== CSS VARIABLES ===== */
+:root {
+  --bg-primary: #0A0F1E;
+  --bg-secondary: #0D1426;
+  --bg-card: #111827;
+  --bg-card-hover: #151f32;
+  --accent: #00D4FF;
+  --accent-2: #7C3AED;
+  --accent-3: #10B981;
+  --text-primary: #F1F5F9;
+  --text-secondary: #94A3B8;
+  --text-muted: #64748B;
+  --border: rgba(255,255,255,0.08);
+  --border-accent: rgba(0,212,255,0.25);
+  --shadow: 0 4px 24px rgba(0,0,0,0.4);
+  --shadow-glow: 0 0 40px rgba(0,212,255,0.15);
+  --radius: 12px;
+  --radius-lg: 20px;
+  --font-display: 'Syne', sans-serif;
+  --font-body: 'DM Sans', sans-serif;
+  --nav-h: 72px;
+  --transition: 0.3s cubic-bezier(0.4,0,0.2,1);
+}
+
+body.light-mode {
+  --bg-primary: #F8FAFC;
+  --bg-secondary: #F1F5F9;
+  --bg-card: #FFFFFF;
+  --bg-card-hover: #F8FAFC;
+  --text-primary: #0F172A;
+  --text-secondary: #475569;
+  --text-muted: #94A3B8;
+  --border: rgba(0,0,0,0.08);
+  --border-accent: rgba(0,150,180,0.25);
+  --shadow: 0 4px 24px rgba(0,0,0,0.1);
+}
+
+/* ===== RESET & BASE ===== */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.6;
+  overflow-x: hidden;
+  transition: background var(--transition), color var(--transition);
+}
+
+img { max-width: 100%; display: block; }
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; }
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section { padding: 100px 0; }
+.section-alt { background: var(--bg-secondary); }
+
+.accent { color: var(--accent); }
+
+/* ===== BUTTONS ===== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  border-radius: var(--radius);
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  border: none;
+  transition: all var(--transition);
+  letter-spacing: 0.02em;
+  text-decoration: none;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: #0A0F1E;
+}
+.btn-primary:hover { background: #00b8e0; transform: translateY(-2px); box-shadow: 0 8px 30px rgba(0,212,255,0.3); }
+
+.btn-outline {
+  background: transparent;
+  color: var(--accent);
+  border: 1.5px solid var(--accent);
+}
+.btn-outline:hover { background: rgba(0,212,255,0.08); transform: translateY(-2px); }
+
+.btn-ghost {
+  background: transparent;
+  color: var(--text-secondary);
+}
+.btn-ghost:hover { color: var(--accent); }
+
+.btn-whatsapp {
+  background: #25D366;
+  color: #fff;
+}
+.btn-whatsapp:hover { background: #1ebe5b; transform: translateY(-2px); }
+
+.btn-sm { padding: 8px 16px; font-size: 0.82rem; }
+.btn-full { width: 100%; justify-content: center; }
+
+/* ===== NAVBAR ===== */
+.navbar {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 1000;
+  height: var(--nav-h);
+  transition: all var(--transition);
+  background: transparent;
+}
+
+.navbar.scrolled {
+  background: rgba(10,15,30,0.92);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
+body.light-mode .navbar.scrolled {
+  background: rgba(248,250,252,0.92);
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--text-primary);
+}
+
+.logo-mark {
+  width: 36px;
+  height: 36px;
+  background: var(--accent);
+  color: #0A0F1E;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 0.85rem;
+  flex-shrink: 0;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-left: auto;
+}
+
+.nav-links a {
+  padding: 6px 14px;
+  border-radius: 8px;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  transition: all var(--transition);
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--accent);
+  background: rgba(0,212,255,0.08);
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.theme-toggle {
+  width: 38px;
+  height: 38px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--text-secondary);
+  transition: all var(--transition);
+}
+.theme-toggle:hover { color: var(--accent); border-color: var(--accent); }
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  margin-left: 8px;
+}
+.hamburger span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--text-primary);
+  border-radius: 2px;
+  transition: all var(--transition);
+}
+.hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.hamburger.open span:nth-child(2) { opacity: 0; }
+.hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* ===== HERO ===== */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  padding-top: var(--nav-h);
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.hero-grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(0,212,255,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,212,255,0.04) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+.hero-glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  pointer-events: none;
+}
+.glow-1 {
+  width: 500px; height: 500px;
+  background: radial-gradient(circle, rgba(0,212,255,0.12), transparent 70%);
+  top: -100px; right: 10%;
+}
+.glow-2 {
+  width: 400px; height: 400px;
+  background: radial-gradient(circle, rgba(124,58,237,0.1), transparent 70%);
+  bottom: 0; left: 5%;
+}
+
+.hero-container {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 80px;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 16px;
+  background: rgba(0,212,255,0.08);
+  border: 1px solid rgba(0,212,255,0.2);
+  border-radius: 999px;
+  font-size: 0.82rem;
+  color: var(--accent);
+  font-weight: 500;
+  margin-bottom: 24px;
+  width: fit-content;
+}
+
+.badge-dot {
+  width: 7px; height: 7px;
+  background: var(--accent-3);
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(0.8); }
+}
+
+.hero-name {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 16px;
+  letter-spacing: -0.02em;
+}
+
+.hero-title {
+  font-family: var(--font-display);
+  font-size: clamp(1rem, 2vw, 1.3rem);
+  font-weight: 600;
+  color: var(--accent);
+  margin-bottom: 24px;
+  min-height: 2em;
+}
+
+.cursor {
+  animation: blink 1s step-end infinite;
+  color: var(--accent);
+}
+@keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+
+.hero-bio {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  max-width: 480px;
+  margin-bottom: 36px;
+  line-height: 1.75;
+}
+
+.hero-cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 36px;
+}
+
+.hero-socials {
+  display: flex;
+  gap: 12px;
+}
+
+.social-link {
+  width: 42px; height: 42px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+  font-size: 1rem;
+  transition: all var(--transition);
+}
+.social-link:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0,212,255,0.2);
+}
+
+/* Hero Visual */
+.hero-visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-image-wrap {
+  position: relative;
+  width: 320px;
+  height: 320px;
+}
+
+.hero-image-ring {
+  position: absolute;
+  inset: -12px;
+  border-radius: 50%;
+  border: 2px dashed rgba(0,212,255,0.3);
+  animation: spin 20s linear infinite;
+}
+@keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid rgba(0,212,255,0.3);
+  background: var(--bg-card);
+}
+
+.hero-image-badge {
+  position: absolute;
+  background: var(--bg-card);
+  border: 1px solid var(--border-accent);
+  border-radius: var(--radius);
+  padding: 10px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: var(--shadow);
+  min-width: 90px;
+}
+
+.badge-exp { top: 10px; right: -20px; }
+.badge-proj { bottom: 30px; left: -20px; }
+
+.badge-num {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.2rem;
+  color: var(--accent);
+  line-height: 1;
+}
+
+.badge-lbl {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+.hero-scroll-hint {
+  position: absolute;
+  bottom: 32px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+.hero-scroll-hint a {
+  width: 40px; height: 40px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  animation: bounce 2s ease-in-out infinite;
+  transition: all var(--transition);
+}
+.hero-scroll-hint a:hover { color: var(--accent); border-color: var(--accent); }
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(6px); }
+}
+
+/* ===== STATS STRIP ===== */
+.stats-strip {
+  padding: 60px 0;
+  background: var(--bg-card);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 32px;
+}
+
+.stat-item {
+  text-align: center;
+  padding: 24px 16px;
+  border-radius: var(--radius);
+  transition: all var(--transition);
+  position: relative;
+}
+.stat-item::after {
+  content: '';
+  position: absolute;
+  right: 0; top: 20%; bottom: 20%;
+  width: 1px;
+  background: var(--border);
+}
+.stat-item:last-child::after { display: none; }
+.stat-item:hover { background: var(--bg-card-hover); }
+
+.stat-num {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--accent);
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.stat-label {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+/* ===== SECTION HEADER ===== */
+.section-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-tag {
+  display: inline-block;
+  padding: 4px 14px;
+  background: rgba(0,212,255,0.08);
+  border: 1px solid rgba(0,212,255,0.2);
+  color: var(--accent);
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+
+.section-subtitle {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  max-width: 540px;
+  margin: 0 auto;
+}
+
+/* ===== PROJECT / CASE STUDY CARDS ===== */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+  gap: 28px;
+}
+
+.project-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  transition: all var(--transition);
+}
+.project-card:hover {
+  border-color: var(--border-accent);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-glow);
+}
+
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.project-industry {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.project-type {
+  padding: 3px 10px;
+  background: rgba(0,212,255,0.1);
+  color: var(--accent);
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.project-title {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  line-height: 1.35;
+}
+
+.project-objective {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  margin-bottom: 12px;
+  line-height: 1.6;
+}
+
+.project-strategy {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin-bottom: 16px;
+  padding: 12px 16px;
+  background: rgba(255,255,255,0.03);
+  border-radius: 8px;
+  border-left: 3px solid var(--accent);
+  line-height: 1.6;
+}
+
+.project-tools {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+.project-tools span {
+  padding: 3px 10px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.project-results {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.result-item {
+  text-align: center;
+  padding: 14px 8px;
+  background: rgba(0,212,255,0.06);
+  border: 1px solid rgba(0,212,255,0.15);
+  border-radius: var(--radius);
+}
+
+.result-val {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--accent);
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.result-lbl {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.project-cta {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* ===== SERVICES ===== */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.service-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 36px 28px;
+  transition: all var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+.service-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  opacity: 0;
+  transition: opacity var(--transition);
+}
+.service-card:hover {
+  border-color: var(--border-accent);
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-glow);
+}
+.service-card:hover::before { opacity: 1; }
+
+.service-num {
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  letter-spacing: 0.1em;
+  margin-bottom: 16px;
+}
+
+.service-icon {
+  width: 52px; height: 52px;
+  background: rgba(0,212,255,0.1);
+  border-radius: var(--radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  color: var(--accent);
+  margin-bottom: 20px;
+}
+
+.service-card h3 {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.service-card > p {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.service-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.service-list li {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  padding-left: 16px;
+  position: relative;
+}
+.service-list li::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 50%;
+  transform: translateY(-50%);
+  width: 5px; height: 5px;
+  background: var(--accent);
+  border-radius: 50%;
+}
+
+/* ===== SKILLS ===== */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.skill-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  transition: all var(--transition);
+}
+.skill-card:hover { border-color: var(--border-accent); transform: translateX(4px); }
+
+.skill-icon {
+  width: 44px; height: 44px;
+  background: rgba(0,212,255,0.1);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent);
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.skill-info { flex: 1; }
+.skill-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+.skill-name {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+.skill-pct {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: var(--accent);
+}
+
+.skill-bar {
+  height: 5px;
+  background: rgba(255,255,255,0.08);
+  border-radius: 999px;
+  overflow: hidden;
+}
+.skill-fill {
+  height: 100%;
+  width: 0;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  border-radius: 999px;
+  transition: width 1.2s cubic-bezier(0.4,0,0.2,1);
+}
+
+/* ===== TOOLS ===== */
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+}
+
+.tool-item {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  text-align: center;
+  transition: all var(--transition);
+  cursor: default;
+}
+.tool-item:hover {
+  border-color: var(--border-accent);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-glow);
+}
+.tool-item i {
+  font-size: 1.8rem;
+  color: var(--accent);
+}
+.tool-item span {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+/* ===== BLOG ===== */
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.blog-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: all var(--transition);
+}
+.blog-card:hover {
+  border-color: var(--border-accent);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-glow);
+}
+
+.blog-img img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+.blog-content {
+  padding: 24px;
+}
+
+.blog-tag {
+  display: inline-block;
+  padding: 3px 10px;
+  background: rgba(0,212,255,0.1);
+  color: var(--accent);
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.blog-content h3 {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+.blog-content h3 a { color: var(--text-primary); transition: color var(--transition); }
+.blog-content h3 a:hover { color: var(--accent); }
+
+.blog-content p {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin-bottom: 16px;
+  line-height: 1.6;
+}
+
+.blog-meta {
+  display: flex;
+  gap: 16px;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+.blog-meta span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* ===== ABOUT ===== */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.6fr;
+  gap: 64px;
+  align-items: start;
+}
+
+.about-image-wrap {
+  position: relative;
+}
+.about-image {
+  width: 100%;
+  border-radius: var(--radius-lg);
+  aspect-ratio: 4/5;
+  object-fit: cover;
+  border: 1px solid var(--border);
+}
+.about-image-accent {
+  position: absolute;
+  bottom: -16px; right: -16px;
+  width: 60%;
+  height: 60%;
+  border: 2px solid var(--accent);
+  border-radius: var(--radius-lg);
+  opacity: 0.2;
+  z-index: -1;
+}
+
+.about-lead {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  line-height: 1.8;
+  margin-bottom: 24px;
+}
+
+.about-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 32px;
+}
+
+.tag {
+  padding: 5px 14px;
+  background: rgba(0,212,255,0.08);
+  border: 1px solid rgba(0,212,255,0.2);
+  color: var(--accent);
+  border-radius: 8px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.about-goals {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 32px;
+}
+
+.goal-item {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+.goal-item > i {
+  width: 40px; height: 40px;
+  background: rgba(0,212,255,0.1);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent);
+  font-size: 1rem;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.goal-item strong {
+  font-family: var(--font-display);
+  display: block;
+  font-size: 0.92rem;
+  margin-bottom: 4px;
+}
+.goal-item p {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
+}
+
+.about-cta {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* ===== CONTACT ===== */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 56px;
+  align-items: start;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.contact-icon {
+  width: 46px; height: 46px;
+  background: rgba(0,212,255,0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent);
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.contact-item strong {
+  display: block;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 2px;
+}
+.contact-item a, .contact-item span {
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+  transition: color var(--transition);
+}
+.contact-item a:hover { color: var(--accent); }
+
+.contact-resume {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 32px;
+}
+
+/* Contact Form */
+.contact-form {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 36px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 13px 16px;
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  transition: all var(--transition);
+  outline: none;
+  resize: none;
+}
+.form-group input::placeholder,
+.form-group textarea::placeholder { color: var(--text-muted); }
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(0,212,255,0.08);
+}
+
+.form-error {
+  display: block;
+  margin-top: 6px;
+  font-size: 0.78rem;
+  color: #FF5E5E;
+  min-height: 1rem;
+}
+
+.form-success {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 18px;
+  background: rgba(16,185,129,0.1);
+  border: 1px solid rgba(16,185,129,0.3);
+  border-radius: var(--radius);
+  color: var(--accent-3);
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-top: 16px;
+  opacity: 0;
+  transform: translateY(8px);
+  transition: all var(--transition);
+  pointer-events: none;
+}
+.form-success.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  background: var(--bg-card);
+  border-top: 1px solid var(--border);
+  padding: 72px 0 32px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+  gap: 48px;
+  margin-bottom: 56px;
+}
+
+.footer-brand p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin: 16px 0 20px;
+  max-width: 260px;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 10px;
+}
+.footer-socials a {
+  width: 36px; height: 36px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  transition: all var(--transition);
+}
+.footer-socials a:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+.footer-links h4 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.88rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-primary);
+  margin-bottom: 20px;
+}
+
+.footer-links ul li {
+  margin-bottom: 10px;
+}
+.footer-links ul li a {
+  font-size: 0.86rem;
+  color: var(--text-muted);
+  transition: color var(--transition);
+}
+.footer-links ul li a:hover { color: var(--accent); }
+
+.footer-contact h4 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.88rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-primary);
+  margin-bottom: 20px;
+}
+
+.footer-contact p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+.footer-contact p i { color: var(--accent); }
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+/* ===== BACK TO TOP ===== */
+.back-to-top {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  width: 44px; height: 44px;
+  background: var(--accent);
+  color: #0A0F1E;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 1rem;
+  opacity: 0;
+  transform: translateY(16px);
+  transition: all var(--transition);
+  z-index: 999;
+  box-shadow: 0 4px 16px rgba(0,212,255,0.35);
+}
+.back-to-top.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.back-to-top:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0,212,255,0.5);
+}
+
+/* ===== REVEAL ANIMATION ===== */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+  .services-grid { grid-template-columns: repeat(2, 1fr); }
+  .tools-grid { grid-template-columns: repeat(4, 1fr); }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+  .stats-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .nav-links, .nav-actions .btn-sm {
+    display: none;
+  }
+  .nav-links.open {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: var(--nav-h);
+    left: 0; right: 0;
+    background: var(--bg-card);
+    border-bottom: 1px solid var(--border);
+    padding: 20px;
+    gap: 4px;
+    z-index: 999;
+  }
+  .nav-links.open a {
+    padding: 12px 16px;
+    border-radius: var(--radius);
+  }
+  .hamburger { display: flex; }
+
+  .hero-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: center;
+    padding-bottom: 40px;
+  }
+  .hero-content { order: 2; }
+  .hero-visual { order: 1; }
+  .hero-badge { margin: 0 auto 24px; }
+  .hero-bio { margin: 0 auto 32px; }
+  .hero-cta { justify-content: center; }
+  .hero-socials { justify-content: center; }
+  .hero-image-wrap { width: 240px; height: 240px; }
+  .badge-exp { right: -10px; }
+  .badge-proj { left: -10px; }
+
+  .stats-grid { grid-template-columns: repeat(2, 1fr); }
+  .stat-item::after { display: none; }
+
+  .projects-grid { grid-template-columns: 1fr; }
+  .services-grid { grid-template-columns: 1fr; }
+  .skills-grid { grid-template-columns: 1fr; }
+  .tools-grid { grid-template-columns: repeat(2, 1fr); }
+  .blog-grid { grid-template-columns: 1fr; }
+  .about-grid { grid-template-columns: 1fr; }
+  .contact-grid { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+  .footer-bottom { flex-direction: column; text-align: center; }
+  .section { padding: 72px 0; }
+}
+
+@media (max-width: 480px) {
+  .stats-grid { grid-template-columns: 1fr; }
+  .hero-cta { flex-direction: column; align-items: center; }
+  .project-results { grid-template-columns: repeat(2, 1fr); }
+  .tools-grid { grid-template-columns: repeat(3, 1fr); }
+  .contact-form { padding: 24px; }
+}
+</style>
+</head>
+<body>
+
+<!-- ===== NAVBAR ===== -->
+<nav class="navbar" id="navbar">
+  <div class="nav-container">
+    <a href="#hero" class="nav-logo">
+      <span class="logo-mark">SR</span>
+      <span class="logo-text">Subash</span>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#projects">Case Studies</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#tools">Tools</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+        <i class="fa-solid fa-moon"></i>
+      </button>
+      <a href="#contact" class="btn btn-primary btn-sm">Hire Me</a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ===== HERO SECTION ===== -->
+<section class="hero" id="hero">
+  <div class="hero-bg">
+    <div class="hero-grid"></div>
+    <div class="hero-glow glow-1"></div>
+    <div class="hero-glow glow-2"></div>
+  </div>
+  <div class="container hero-container">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        Available for new opportunities
+      </div>
+      <h1 class="hero-name">Subash <span class="accent">Ravi</span></h1>
+      <div class="hero-title">
+        <span class="typing-text" id="typingText"></span><span class="cursor">|</span>
+      </div>
+      <p class="hero-bio">
+        Helping brands grow through search visibility, AI search optimization, and technical SEO strategies that drive <strong>measurable organic growth</strong>.
+      </p>
+      <div class="hero-cta">
+        <a href="#contact" class="btn btn-primary"><i class="fa-solid fa-briefcase"></i> Hire Me</a>
+        <a href="subash-resume.pdf" class="btn btn-outline" download="subash-resume.pdf">
+          <i class="fa-solid fa-download"></i> Download Resume
+        </a>
+        <a href="#projects" class="btn btn-ghost">View Case Studies <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+      <div class="hero-socials">
+        <a href="https://www.linkedin.com/in/subashravi/" target="_blank" class="social-link" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="mailto:rsubashdigitalmarketer@gmail.com" class="social-link" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+        <a href="https://wa.me/919677916364?text=" target="_blank" class="social-link" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-image-wrap">
+        <div class="hero-image-ring"></div>
+        <img src="name.jpg" alt="Subash Ravi - SEO GEO AEO Specialist" class="hero-image">
+        <div class="hero-image-badge badge-exp">
+          <span class="badge-num">2+</span>
+          <span class="badge-lbl">Years Exp</span>
+        </div>
+        <div class="hero-image-badge badge-proj">
+          <span class="badge-num">50+</span>
+          <span class="badge-lbl">Keywords</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-scroll-hint">
+    <a href="#stats"><i class="fa-solid fa-chevron-down"></i></a>
+  </div>
+</section>
+
+<!-- ===== STATS COUNTER ===== -->
+<section class="stats-strip" id="stats">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-item" data-target="300">
+        <span class="stat-num"><span class="counter">0</span>%</span>
+        <span class="stat-label">Organic Growth</span>
+      </div>
+      <div class="stat-item" data-target="50">
+        <span class="stat-num"><span class="counter">0</span>+</span>
+        <span class="stat-label">Keywords Ranked</span>
+      </div>
+      <div class="stat-item" data-target="80">
+        <span class="stat-num"><span class="counter">0</span>K+</span>
+        <span class="stat-label">Monthly Organic Visits</span>
+      </div>
+      <div class="stat-item" data-target="15">
+        <span class="stat-num"><span class="counter">0</span>+</span>
+        <span class="stat-label">Brands Helped</span>
+      </div>
+      <div class="stat-item" data-target="95">
+        <span class="stat-num"><span class="counter">0</span>%</span>
+        <span class="stat-label">Client Satisfaction</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CASE STUDIES SECTION ===== -->
+<section class="projects section section-alt" id="projects">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Case Studies</span>
+      <h2 class="section-title">SEO Results I've <span class="accent">Delivered</span></h2>
+      <p class="section-subtitle">Real SEO campaigns. Real organic numbers. No fluff.</p>
+    </div>
+    <div class="projects-grid">
+
+      <!-- CASE STUDY 1: B2B SaaS -->
+      <div class="project-card reveal" data-category="seo">
+        <div class="project-header">
+          <div class="project-industry"><i class="fa-solid fa-building"></i> SaaS / B2B</div>
+          <div class="project-type">SEO</div>
+        </div>
+        <h3 class="project-title">Organic Traffic 3X Growth for B2B SaaS</h3>
+        <p class="project-objective"><strong>Objective:</strong> Increase organic search visibility and qualified inbound leads for a project management SaaS tool.</p>
+        <div class="project-strategy">
+          <strong>Strategy:</strong> Technical SEO overhaul, topical authority content clusters, BOFU landing pages, backlink acquisition campaign.
+        </div>
+        <div class="project-tools">
+          <span>Ahrefs</span><span>SEMrush</span><span>GSC</span><span>WordPress</span><span>GA4</span>
+        </div>
+        <div class="project-results">
+          <div class="result-item">
+            <span class="result-val">312%</span>
+            <span class="result-lbl">Organic Traffic ↑</span>
+          </div>
+          <div class="result-item">
+            <span class="result-val">48</span>
+            <span class="result-lbl">Page-1 Keywords</span>
+          </div>
+          <div class="result-item">
+            <span class="result-val">320%</span>
+            <span class="result-lbl">Lead Growth ↑</span>
+          </div>
+        </div>
+        <div class="project-cta">
+          <a href="seo-case-study-1.html" class="btn btn-primary btn-sm">View Full Case Study</a>
+          <a href="#" class="btn btn-ghost btn-sm"><i class="fa-solid fa-file-arrow-down"></i> Download Report</a>
+        </div>
+      </div>
+
+      <!-- CASE STUDY 2: Healthcare Local SEO -->
+      <div class="project-card reveal" data-category="seo">
+        <div class="project-header">
+          <div class="project-industry"><i class="fa-solid fa-heartbeat"></i> Healthcare</div>
+          <div class="project-type">Local SEO</div>
+        </div>
+        <h3 class="project-title">Local SEO Growth for Healthcare Clinic</h3>
+        <p class="project-objective"><strong>Objective:</strong> Drive foot traffic and appointment bookings across clinic locations through local search optimization.</p>
+        <div class="project-strategy">
+          <strong>Strategy:</strong> Google Business Profile optimization, local citation building, location-specific landing pages, review generation system.
+        </div>
+        <div class="project-tools">
+          <span>GBP</span><span>BrightLocal</span><span>SEMrush</span><span>GA4</span><span>GSC</span>
+        </div>
+        <div class="project-results">
+          <div class="result-item">
+            <span class="result-val">410%</span>
+            <span class="result-lbl">GBP Views ↑</span>
+          </div>
+          <div class="result-item">
+            <span class="result-val">#1</span>
+            <span class="result-lbl">Local Rankings</span>
+          </div>
+          <div class="result-item">
+            <span class="result-val">175%</span>
+            <span class="result-lbl">Appointment Growth ↑</span>
+          </div>
+        </div>
+        <div class="project-cta">
+          <a href="seo-case-study-2.html" class="btn btn-primary btn-sm">View Full Case Study</a>
+          <a href="#" class="btn btn-ghost btn-sm"><i class="fa-solid fa-file-arrow-down"></i> Download Report</a>
+        </div>
+      </div>
+
+      <!-- CASE STUDY 3: E-commerce -->
+      <div class="project-card reveal" data-category="seo">
+        <div class="project-header">
+          <div class="project-industry"><i class="fa-solid fa-store"></i> E-commerce</div>
+          <div class="project-type">SEO</div>
+        </div>
+        <h3 class="project-title">E-commerce SEO Revenue Growth</h3>
+        <p class="project-objective"><strong>Objective:</strong> Grow organic revenue for a D2C skincare brand competing against established players in a high-CPC niche.</p>
+        <div class="project-strategy">
+          <strong>Strategy:</strong> Product page optimization, collection page SEO, buyer-intent keyword targeting, structured data for rich snippets.
+        </div>
+        <div class="project-tools">
+          <span>Shopify</span><span>Ahrefs</span><span>GSC</span><span>GA4</span><span>Screaming Frog</span>
+        </div>
+        <div class="project-results">
+          <div class="result-item">
+            <span class="result-val">5X</span>
+            <span class="result-lbl">Organic Revenue ↑</span>
+          </div>
+          <div class="result-item">
+            <span class="result-val">260%</span>
+            <span class="result-lbl">Organic Sessions ↑</span>
+          </div>
+          <div class="result-item">
+            <span class="result-val">120+</span>
+            <span class="result-lbl">Ranked Keywords</span>
+          </div>
+        </div>
+        <div class="project-cta">
+          <a href="seo-case-study-3.html" class="btn btn-primary btn-sm">View Full Case Study</a>
+          <a href="#" class="btn btn-ghost btn-sm"><i class="fa-solid fa-file-arrow-down"></i> Download Report</a>
+        </div>
+      </div>
+
+      <!-- CASE STUDY 4: EdTech -->
+      <div class="project-card reveal" data-category="seo">
+        <div class="project-header">
+          <div class="project-industry"><i class="fa-solid fa-graduation-cap"></i> EdTech</div>
+          <div class="project-type">SEO</div>
+        </div>
+        <h3 class="project-title">EdTech SEO Scaling Strategy</h3>
+        <p class="project-objective"><strong>Objective:</strong> Build organic search presence from scratch for a new online learning platform targeting working professionals.</p>
+        <div class="project-strategy">
+          <strong>Strategy:</strong> Topical authority mapping, programmatic SEO for course pages, comparison &amp; "best of" content, guest posting for DR growth.
+        </div>
+        <div class="project-tools">
+          <span>SEMrush</span><span>WordPress</span><span>Ahrefs</span><span>GSC</span><span>Yoast</span>
+        </div>
+        <div class="project-results">
+          <div class="result-item">
+            <span class="result-val">80K</span>
+            <span class="result-lbl">Monthly Visits</span>
+          </div>
+          <div class="result-item">
+            <span class="result-val">DR 38</span>
+            <span class="result-lbl">Domain Rating Growth</span>
+          </div>
+          <div class="result-item">
+            <span class="result-val">340%</span>
+            <span class="result-lbl">Trial Signups ↑</span>
+          </div>
+        </div>
+        <div class="project-cta">
+          <a href="seo-case-study-4.html" class="btn btn-primary btn-sm">View Full Case Study</a>
+          <a href="#" class="btn btn-ghost btn-sm"><i class="fa-solid fa-file-arrow-down"></i> Download Report</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== SERVICES SECTION ===== -->
+<section class="services section" id="services">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">What I Do</span>
+      <h2 class="section-title">Services I <span class="accent">Deliver</span></h2>
+      <p class="section-subtitle">SEO, GEO &amp; AEO solutions built for measurable organic growth in the age of AI search</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card reveal">
+        <div class="service-num">01</div>
+        <div class="service-icon"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
+        <h3>SEO Optimization</h3>
+        <p>Technical audits, on-page optimization, link building, and content strategies that push you to page 1 and keep you there.</p>
+        <ul class="service-list">
+          <li>Technical SEO Audits</li>
+          <li>Keyword Mapping</li>
+          <li>On-Page SEO</li>
+          <li>Core Web Vitals</li>
+          <li>Internal Linking</li>
+        </ul>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-num">02</div>
+        <div class="service-icon"><i class="fa-solid fa-robot"></i></div>
+        <h3>GEO Optimization</h3>
+        <p>Optimize your brand's presence for AI-powered search engines like ChatGPT, Perplexity, and Gemini Search.</p>
+        <ul class="service-list">
+          <li>AI Search Visibility</li>
+          <li>AI Content Structuring</li>
+          <li>Entity Optimization</li>
+          <li>Semantic SEO</li>
+          <li>AI Citation Optimization</li>
+        </ul>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-num">03</div>
+        <div class="service-icon"><i class="fa-solid fa-bolt"></i></div>
+        <h3>AEO Optimization</h3>
+        <p>Capture featured snippets, voice search, and AI-generated answers by structuring content for answer engines.</p>
+        <ul class="service-list">
+          <li>Featured Snippet Strategy</li>
+          <li>FAQ Schema</li>
+          <li>Voice Search SEO</li>
+          <li>Structured Data</li>
+          <li>Answer Intent Optimization</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SKILLS SECTION ===== -->
+<section class="skills section section-alt" id="skills">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Core Skills</span>
+      <h2 class="section-title">My <span class="accent">Expertise</span> Stack</h2>
+      <p class="section-subtitle">Skills and disciplines I use to drive measurable organic search results</p>
+    </div>
+    <div class="skills-grid">
+      <div class="skill-card reveal">
+        <div class="skill-icon"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
+        <div class="skill-info">
+          <div class="skill-header">
+            <span class="skill-name">Technical SEO</span>
+            <span class="skill-pct">95%</span>
+          </div>
+          <div class="skill-bar"><div class="skill-fill" data-width="95"></div></div>
+        </div>
+      </div>
+      <div class="skill-card reveal">
+        <div class="skill-icon"><i class="fa-solid fa-robot"></i></div>
+        <div class="skill-info">
+          <div class="skill-header">
+            <span class="skill-name">GEO Optimization</span>
+            <span class="skill-pct">90%</span>
+          </div>
+          <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
+        </div>
+      </div>
+      <div class="skill-card reveal">
+        <div class="skill-icon"><i class="fa-solid fa-bolt"></i></div>
+        <div class="skill-info">
+          <div class="skill-header">
+            <span class="skill-name">AEO Optimization</span>
+            <span class="skill-pct">88%</span>
+          </div>
+          <div class="skill-bar"><div class="skill-fill" data-width="88"></div></div>
+        </div>
+      </div>
+      <div class="skill-card reveal">
+        <div class="skill-icon"><i class="fa-brands fa-google"></i></div>
+        <div class="skill-info">
+          <div class="skill-header">
+            <span class="skill-name">Search Console</span>
+            <span class="skill-pct">92%</span>
+          </div>
+          <div class="skill-bar"><div class="skill-fill" data-width="92"></div></div>
+        </div>
+      </div>
+      <div class="skill-card reveal">
+        <div class="skill-icon"><i class="fa-solid fa-gauge-high"></i></div>
+        <div class="skill-info">
+          <div class="skill-header">
+            <span class="skill-name">Core Web Vitals</span>
+            <span class="skill-pct">89%</span>
+          </div>
+          <div class="skill-bar"><div class="skill-fill" data-width="89"></div></div>
+        </div>
+      </div>
+      <div class="skill-card reveal">
+        <div class="skill-icon"><i class="fa-solid fa-sitemap"></i></div>
+        <div class="skill-info">
+          <div class="skill-header">
+            <span class="skill-name">Semantic SEO</span>
+            <span class="skill-pct">91%</span>
+          </div>
+          <div class="skill-bar"><div class="skill-fill" data-width="91"></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TOOLS SECTION ===== -->
+<section class="tools section" id="tools">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">My Toolkit</span>
+      <h2 class="section-title">SEO Tools I <span class="accent">Work With</span></h2>
+    </div>
+    <div class="tools-grid">
+      <div class="tool-item reveal"><i class="fa-brands fa-google"></i><span>Google Analytics</span></div>
+      <div class="tool-item reveal"><i class="fa-solid fa-magnifying-glass-chart"></i><span>Search Console</span></div>
+      <div class="tool-item reveal"><i class="fa-solid fa-a"></i><span>Ahrefs</span></div>
+      <div class="tool-item reveal"><i class="fa-solid fa-s"></i><span>SEMrush</span></div>
+      <div class="tool-item reveal"><i class="fa-solid fa-frog"></i><span>Screaming Frog</span></div>
+      <div class="tool-item reveal"><i class="fa-solid fa-tag"></i><span>Google Tag Manager</span></div>
+      <div class="tool-item reveal"><i class="fa-solid fa-chart-simple"></i><span>Looker Studio</span></div>
+      <div class="tool-item reveal"><i class="fa-solid fa-gauge-simple-high"></i><span>PageSpeed Insights</span></div>
+      <div class="tool-item reveal"><i class="fa-brands fa-wordpress"></i><span>WordPress</span></div>
+      <div class="tool-item reveal"><i class="fa-solid fa-code"></i><span>Schema Validator</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== BLOG SECTION ===== -->
+<section class="blog section section-alt" id="blog">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Blog &amp; Insights</span>
+      <h2 class="section-title">My Latest <span class="accent">SEO Insights</span></h2>
+      <p class="section-subtitle">SEO guides, AI search strategies, and organic growth insights from the trenches</p>
+    </div>
+    <div class="blog-grid">
+      <div class="blog-card reveal">
+        <div class="blog-img"><img src="https://placehold.co/400x220/0A0F1E/00D4FF?text=SEO+2026" alt="SEO in 2026" /></div>
+        <div class="blog-content">
+          <span class="blog-tag">SEO</span>
+          <h3><a href="#">SEO in 2026</a></h3>
+          <p>Latest AI-driven search trends shaping modern SEO.</p>
+          <div class="blog-meta">
+            <span><i class="fa-regular fa-calendar"></i> Jan 10, 2026</span>
+            <span><i class="fa-regular fa-clock"></i> 6 min read</span>
+          </div>
+        </div>
+      </div>
+      <div class="blog-card reveal">
+        <div class="blog-img"><img src="https://placehold.co/400x220/0A0F1E/00D4FF?text=GEO+Guide" alt="GEO Optimization Guide" /></div>
+        <div class="blog-content">
+          <span class="blog-tag">GEO</span>
+          <h3><a href="#">GEO Optimization Guide</a></h3>
+          <p>How AI search engines discover and rank content.</p>
+          <div class="blog-meta">
+            <span><i class="fa-regular fa-calendar"></i> Dec 15, 2025</span>
+            <span><i class="fa-regular fa-clock"></i> 8 min read</span>
+          </div>
+        </div>
+      </div>
+      <div class="blog-card reveal">
+        <div class="blog-img"><img src="https://placehold.co/400x220/0A0F1E/00D4FF?text=AEO+Strategy" alt="AEO Strategy" /></div>
+        <div class="blog-content">
+          <span class="blog-tag">AEO</span>
+          <h3><a href="#">AEO Strategy</a></h3>
+          <p>How to optimize content for featured snippets and AI answers.</p>
+          <div class="blog-meta">
+            <span><i class="fa-regular fa-calendar"></i> Nov 20, 2025</span>
+            <span><i class="fa-regular fa-clock"></i> 7 min read</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ABOUT SECTION ===== -->
+<section class="about section" id="about">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">About Me</span>
+      <h2 class="section-title">Turning Search Data into <span class="accent">Growth</span></h2>
+    </div>
+    <div class="about-grid">
+      <div class="about-image-col">
+        <div class="about-image-wrap">
+          <img src="name.jpg" alt="Subash Ravi" class="about-image" />
+          <div class="about-image-accent"></div>
+        </div>
+      </div>
+      <div class="about-content">
+        <p class="about-lead">
+          I'm a results-driven SEO specialist focused on organic growth, AI search visibility, technical SEO, GEO, and AEO optimization strategies. With a data-first approach, I help brands dominate both traditional and AI-powered search engines.
+        </p>
+        <div class="about-tags">
+          <span class="tag">SEO Strategy</span>
+          <span class="tag">Technical SEO</span>
+          <span class="tag">GEO</span>
+          <span class="tag">AEO</span>
+          <span class="tag">Semantic SEO</span>
+          <span class="tag">Core Web Vitals</span>
+          <span class="tag">AI Search</span>
+          <span class="tag">Schema Markup</span>
+        </div>
+        <div class="about-goals">
+          <div class="goal-item">
+            <i class="fa-solid fa-search"></i>
+            <div>
+              <strong>SEO Philosophy</strong>
+              <p>Organic search is the most sustainable growth channel. I combine technical precision with content strategy to build visibility that compounds over time.</p>
+            </div>
+          </div>
+          <div class="goal-item">
+            <i class="fa-solid fa-robot"></i>
+            <div>
+              <strong>AI Search Focus</strong>
+              <p>The future of search is AI-driven. I specialize in GEO and AEO to ensure brands stay visible as search shifts to generative and answer engines.</p>
+            </div>
+          </div>
+          <div class="goal-item">
+            <i class="fa-solid fa-bullseye"></i>
+            <div>
+              <strong>Career Goal</strong>
+              <p>Join a growth-focused team where I can scale impactful SEO strategies and grow into a senior search leadership role.</p>
+            </div>
+          </div>
+        </div>
+        <div class="about-cta">
+          <a href="#contact" class="btn btn-primary">Let's Connect</a>
+          <a href="subash-resume.pdf" class="btn btn-outline" download="subash-resume.pdf">
+            My Resume <i class="fa-solid fa-file-arrow-down"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACT SECTION ===== -->
+<section class="contact section" id="contact">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Get In Touch</span>
+      <h2 class="section-title">Let's <span class="accent">Work Together</span></h2>
+      <p class="section-subtitle">Open to full-time roles, freelance SEO projects, and agency partnerships</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <div class="contact-item">
+          <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+          <div>
+            <strong>Email</strong>
+            <a href="mailto:rsubashdigitalmarketer@gmail.com">rsubashdigitalmarketer@gmail.com</a>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon"><i class="fa-brands fa-whatsapp"></i></div>
+          <div>
+            <strong>WhatsApp</strong>
+            <a href="https://wa.me/919677916364?text=" target="_blank">+91 96779 16364</a>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon"><i class="fa-brands fa-linkedin-in"></i></div>
+          <div>
+            <strong>LinkedIn</strong>
+            <a href="https://linkedin.com/in/subashravi" target="_blank">linkedin.com/in/subashravi</a>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon"><i class="fa-solid fa-map-pin"></i></div>
+          <div>
+            <strong>Location</strong>
+            <span>Bengaluru, Karnataka, India</span>
+          </div>
+        </div>
+        <div class="contact-resume">
+          <a href="subash-resume.pdf" class="btn btn-primary" download><i class="fa-solid fa-file-arrow-down"></i> Download Resume</a>
+          <a href="https://wa.me/919677916364?text=" target="_blank" class="btn btn-whatsapp"><i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp</a>
+        </div>
+      </div>
+      <form class="contact-form" id="contactForm">
+        <div class="form-group">
+          <input type="text" id="contactName" name="name" placeholder="Your Full Name" required />
+          <span class="form-error" id="nameError"></span>
+        </div>
+        <div class="form-group">
+          <input type="email" id="contactEmail" name="email" placeholder="Your Email Address" required />
+          <span class="form-error" id="emailError"></span>
+        </div>
+        <div class="form-group">
+          <textarea id="contactMessage" name="message" placeholder="Tell me about your project or SEO goals..." rows="5" required></textarea>
+          <span class="form-error" id="messageError"></span>
+        </div>
+        <button type="submit" class="btn btn-primary btn-full">
+          <span>Send Message</span>
+          <i class="fa-solid fa-paper-plane"></i>
+        </button>
+        <div class="form-success" id="formSuccess">
+          <i class="fa-solid fa-circle-check"></i> Message sent! I'll get back to you within 24 hours.
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#hero" class="nav-logo">
+          <span class="logo-mark">SR</span>
+          <span class="logo-text">Subash Ravi</span>
+        </a>
+        <p>SEO, GEO &amp; AEO Specialist helping brands grow through search visibility, AI search optimization, and technical SEO strategies.</p>
+        <div class="footer-socials">
+          <a href="https://linkedin.com/in/subashravi" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="mailto:rsubashdigitalmarketer@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+          <a href="https://wa.me/919677916364?text=" target="_blank" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#projects">Case Studies</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#tools">Tools</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#services">SEO Optimization</a></li>
+          <li><a href="#services">GEO Optimization</a></li>
+          <li><a href="#services">AEO Optimization</a></li>
+          <li><a href="#services">Technical SEO</a></li>
+          <li><a href="#services">Local SEO</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4>Get In Touch</h4>
+        <p><i class="fa-solid fa-envelope"></i> rsubashdigitalmarketer@gmail.com</p>
+        <p><i class="fa-brands fa-whatsapp"></i> +91 96779 16364</p>
+        <p><i class="fa-solid fa-map-pin"></i> Bengaluru, India</p>
+        <a href="subash-resume.pdf" class="btn btn-outline btn-sm" style="margin-top:1rem;" download="subash-resume.pdf">
+          Download Resume
+        </a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Subash Ravi. All rights reserved.</p>
+      <p>SEO Specialist | GEO Expert | AEO Optimizer</p>
+    </div>
+  </div>
+</footer>
+
+<!-- Back to Top -->
+<button class="back-to-top" id="backToTop" aria-label="Back to top">
+  <i class="fa-solid fa-arrow-up"></i>
+</button>
+
+<!-- =============================================
+     Inline JavaScript (previously script.js)
+     ============================================= -->
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+
+  // ===== NAVBAR SCROLL EFFECT =====
+  const navbar = document.getElementById('navbar');
+  const navLinks = document.querySelectorAll('.nav-links a');
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+      navbar.classList.add('scrolled');
+    } else {
+      navbar.classList.remove('scrolled');
+    }
+    updateActiveNav();
+    toggleBackToTop();
+  });
+
+  // ===== HAMBURGER MENU =====
+  const hamburger = document.getElementById('hamburger');
+  const navLinksContainer = document.getElementById('navLinks');
+
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('open');
+    navLinksContainer.classList.toggle('open');
+  });
+
+  // Close nav on link click
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      hamburger.classList.remove('open');
+      navLinksContainer.classList.remove('open');
+    });
+  });
+
+  // ===== ACTIVE NAV LINK =====
+  function updateActiveNav() {
+    const sections = document.querySelectorAll('section[id], .stats-strip[id]');
+    let current = '';
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop - 120;
+      if (window.scrollY >= sectionTop) {
+        current = section.getAttribute('id');
+      }
+    });
+    navLinks.forEach(link => {
+      link.classList.remove('active');
+      if (link.getAttribute('href') === `#${current}`) {
+        link.classList.add('active');
+      }
+    });
+  }
+
+  // ===== TYPING TEXT EFFECT =====
+  const typingEl = document.getElementById('typingText');
+  const titles = [
+    'SEO | GEO | AEO Specialist',
+    'Technical SEO Expert',
+    'AI Search Optimizer',
+    'Organic Growth Strategist',
+    'GEO & AEO Consultant',
+    'Search Visibility Expert'
+  ];
+  let titleIdx = 0;
+  let charIdx = 0;
+  let isDeleting = false;
+
+  function type() {
+    const current = titles[titleIdx];
+    if (isDeleting) {
+      typingEl.textContent = current.substring(0, charIdx - 1);
+      charIdx--;
+    } else {
+      typingEl.textContent = current.substring(0, charIdx + 1);
+      charIdx++;
+    }
+    let delay = isDeleting ? 60 : 100;
+    if (!isDeleting && charIdx === current.length) {
+      delay = 2000;
+      isDeleting = true;
+    } else if (isDeleting && charIdx === 0) {
+      isDeleting = false;
+      titleIdx = (titleIdx + 1) % titles.length;
+      delay = 400;
+    }
+    setTimeout(type, delay);
+  }
+  if (typingEl) type();
+
+  // ===== SCROLL REVEAL ANIMATION =====
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const siblings = Array.from(entry.target.parentElement.children);
+        const index = siblings.indexOf(entry.target);
+        entry.target.style.transitionDelay = `${(index % 4) * 80}ms`;
+        entry.target.classList.add('visible');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+  document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+  // ===== ANIMATED STATS COUNTER =====
+  const counters = document.querySelectorAll('.counter');
+  let countersAnimated = false;
+
+  const statsObserver = new IntersectionObserver((entries) => {
+    if (entries[0].isIntersecting && !countersAnimated) {
+      countersAnimated = true;
+      counters.forEach(counter => {
+        const target = parseInt(counter.closest('.stat-item').dataset.target);
+        let current = 0;
+        const increment = target / 60;
+        const timer = setInterval(() => {
+          current += increment;
+          if (current >= target) {
+            counter.textContent = target;
+            clearInterval(timer);
+          } else {
+            counter.textContent = Math.floor(current);
+          }
+        }, 25);
+      });
+    }
+  }, { threshold: 0.3 });
+
+  const statsSection = document.getElementById('stats');
+  if (statsSection) statsObserver.observe(statsSection);
+
+  // ===== SKILL BARS ANIMATION =====
+  const skillObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.querySelectorAll('.skill-fill').forEach(bar => {
+          const width = bar.dataset.width;
+          setTimeout(() => { bar.style.width = width + '%'; }, 200);
+        });
+        skillObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.2 });
+
+  const skillsSection = document.getElementById('skills');
+  if (skillsSection) skillObserver.observe(skillsSection);
+
+  // ===== THEME TOGGLE =====
+  const themeToggle = document.getElementById('themeToggle');
+  const body = document.body;
+  const themeIcon = themeToggle?.querySelector('i');
+
+  const savedTheme = localStorage.getItem('portfolio-theme');
+  if (savedTheme === 'light') {
+    body.classList.add('light-mode');
+    if (themeIcon) themeIcon.className = 'fa-solid fa-sun';
+  }
+
+  themeToggle?.addEventListener('click', () => {
+    body.classList.toggle('light-mode');
+    const isLight = body.classList.contains('light-mode');
+    if (themeIcon) {
+      themeIcon.className = isLight ? 'fa-solid fa-sun' : 'fa-solid fa-moon';
+    }
+    localStorage.setItem('portfolio-theme', isLight ? 'light' : 'dark');
+  });
+
+  // ===== BACK TO TOP =====
+  const backToTop = document.getElementById('backToTop');
+  function toggleBackToTop() {
+    if (window.scrollY > 400) {
+      backToTop?.classList.add('visible');
+    } else {
+      backToTop?.classList.remove('visible');
+    }
+  }
+  backToTop?.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  // ===== CONTACT FORM VALIDATION =====
+  const contactForm = document.getElementById('contactForm');
+  const formSuccess = document.getElementById('formSuccess');
+
+  if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const name = document.getElementById('contactName');
+      const email = document.getElementById('contactEmail');
+      const message = document.getElementById('contactMessage');
+      const nameErr = document.getElementById('nameError');
+      const emailErr = document.getElementById('emailError');
+      const messageErr = document.getElementById('messageError');
+      let valid = true;
+
+      [nameErr, emailErr, messageErr].forEach(el => { if (el) el.textContent = ''; });
+      [name, email, message].forEach(el => { if (el) el.style.borderColor = ''; });
+
+      if (!name.value.trim() || name.value.trim().length < 2) {
+        nameErr.textContent = 'Please enter your full name (min 2 characters)';
+        name.style.borderColor = '#FF5E5E';
+        valid = false;
+      }
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(email.value.trim())) {
+        emailErr.textContent = 'Please enter a valid email address';
+        email.style.borderColor = '#FF5E5E';
+        valid = false;
+      }
+      if (!message.value.trim() || message.value.trim().length < 10) {
+        messageErr.textContent = 'Message must be at least 10 characters';
+        message.style.borderColor = '#FF5E5E';
+        valid = false;
+      }
+
+      if (valid) {
+        const submitBtn = contactForm.querySelector('[type="submit"]');
+        const originalContent = submitBtn.innerHTML;
+        submitBtn.innerHTML = '<span>Sending...</span> <i class="fa-solid fa-spinner fa-spin"></i>';
+        submitBtn.disabled = true;
+        setTimeout(() => {
+          submitBtn.innerHTML = originalContent;
+          submitBtn.disabled = false;
+          contactForm.reset();
+          formSuccess.classList.add('visible');
+          setTimeout(() => formSuccess.classList.remove('visible'), 5000);
+        }, 1500);
+      }
+    });
+  }
+
+  // ===== SMOOTH SCROLL FOR ANCHOR LINKS =====
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', (e) => {
+      const target = document.querySelector(anchor.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        const offset = 80;
+        const top = target.getBoundingClientRect().top + window.scrollY - offset;
+        window.scrollTo({ top, behavior: 'smooth' });
+      }
+    });
+  });
+
+  // ===== NAVBAR HIGHLIGHT ON SECTION ENTER =====
+  const sections = document.querySelectorAll('section[id]');
+  const navObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const id = entry.target.getAttribute('id');
+        navLinks.forEach(link => {
+          link.classList.remove('active');
+          if (link.getAttribute('href') === `#${id}`) {
+            link.classList.add('active');
+          }
+        });
+      }
+    });
+  }, { threshold: 0.4 });
+
+  sections.forEach(section => navObserver.observe(section));
+
+  // ===== CLOSE MOBILE NAV ON OUTSIDE CLICK =====
+  document.addEventListener('click', (e) => {
+    if (navLinksContainer.classList.contains('open') &&
+        !navLinksContainer.contains(e.target) &&
+        !hamburger.contains(e.target)) {
+      hamburger.classList.remove('open');
+      navLinksContainer.classList.remove('open');
+    }
+  });
+
+  // ===== HERO PARALLAX (subtle) =====
+  window.addEventListener('scroll', () => {
+    const scrolled = window.scrollY;
+    const heroContent = document.querySelector('.hero-content');
+    const heroVisual = document.querySelector('.hero-visual');
+    if (heroContent && scrolled < 600) {
+      heroContent.style.transform = `translateY(${scrolled * 0.08}px)`;
+      if (heroVisual) heroVisual.style.transform = `translateY(${scrolled * 0.05}px)`;
+    }
+  });
+
+  console.log('🚀 Portfolio loaded | Subash Ravi | SEO · GEO · AEO Specialist');
+});
+</script>
+</body>
+</html>
