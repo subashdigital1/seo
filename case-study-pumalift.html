@@ -773,19 +773,38 @@ Every card below was a live problem on the Pumalift website at project start.
 
 <!-- CARD 01 -->
 <div class="audit-card fade-up" data-delay="1">
-<div class="audit-step">01 / Technical SEO</div>
-<span class="audit-emoji">⚡</span>
-<div class="audit-name">Failing Core Web Vitals</div>
-<div class="audit-desc">
-All three Core Web Vitals failing on mobile and desktop. LCP scored 9.4s, CLS at 0.38 — far outside Google's thresholds — directly suppressing rankings across all product pages.
-</div>
-<div class="popup-img-wrap" data-caption="Step 01 — Technical Audit: Core Web Vitals failing on Pumalift.net · LCP 9.4s · CLS 0.38">
-<img src="pumalift-cwv-before.png" alt="Pumalift Core Web Vitals audit screenshot" onerror="this.parentNode.classList.add('broken')">
-<div class="img-placeholder" style="display:none">
-<div class="ph-icon">🔬</div>
-<div class="ph-text">Core Web Vitals Audit<br>LCP 9.4s · CLS 0.38 · Failing</div>
-</div>
-</div>
+
+  <div class="audit-step">01 / Technical SEO Audit</div>
+
+  <span class="audit-emoji">⚡</span>
+
+  <div class="audit-name">Critical Core Web Vitals Failure</div>
+
+  <div class="audit-desc">
+    Severe performance issues detected across both mobile and desktop versions of the website. 
+    Mobile Performance scored only <b>24</b> and Desktop scored <b>26</b>, causing major ranking and user experience issues. 
+    Largest Contentful Paint (LCP) reached <b>25.3s</b>, while First Contentful Paint (FCP) was delayed to <b>4.1s</b>. 
+    Heavy scripts, unoptimized images, and render-blocking resources significantly impacted page speed and SEO visibility.
+  </div>
+
+  <div class="popup-img-wrap"
+       data-caption="Step 01 — Technical SEO Audit: Pumalift.net failing Core Web Vitals · Mobile Score 24 · Desktop Score 26 · LCP 25.3s">
+
+    <img src="pu-Failing-core.png"
+         alt="Pumalift Core Web Vitals failing screenshot"
+         onerror="this.parentNode.classList.add('broken')">
+
+    <div class="img-placeholder" style="display:none">
+      <div class="ph-icon">📉</div>
+
+      <div class="ph-text">
+        Core Web Vitals Failure<br>
+        Mobile 24 · Desktop 26 · LCP 25.3s
+      </div>
+    </div>
+
+  </div>
+
 </div>
 
 <!-- CARD 02 -->
