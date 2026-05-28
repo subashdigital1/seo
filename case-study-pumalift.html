@@ -185,7 +185,6 @@ body::before{content:'';position:fixed;inset:0;z-index:1;pointer-events:none;bac
 
 /* ============================================================
   UNIVERSAL POPUP IMAGE WRAPPER
-  Works for: .popup-img-wrap (used everywhere in this file)
   ============================================================ */
 .popup-img-wrap {
 margin-top: 14px;
@@ -273,8 +272,8 @@ transition: transform 0.35s var(--ease);
 .arrow-cyan{color:var(--cyan);flex-shrink:0;font-size:0.8rem;margin-top:2px}
 .impact-bar{background:var(--green-dim);border:1px solid rgba(0,230,118,0.2);border-radius:8px;padding:10px 14px;font-size:0.8rem;color:var(--green);font-weight:600;display:flex;align-items:center;gap:6px}
 
-/* KPI CARDS */
-.kpi-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+/* KPI CARDS — CHANGED: 3 columns instead of 4 */
+.kpi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
 .kpi-result-card{background:var(--card);border:1px solid var(--border);border-radius:var(--r2);padding:24px 18px;text-align:center;transition:all 0.35s var(--ease-spring);position:relative;overflow:hidden}
 .kpi-result-card::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 100%,rgba(0,229,255,0.08),transparent 60%);opacity:0;transition:opacity 0.3s}
 .kpi-result-card:hover{border-color:var(--cyan-border);transform:translateY(-6px) scale(1.01);box-shadow:0 24px 60px rgba(0,229,255,0.1)}
@@ -497,7 +496,7 @@ max-width: 480px;
 .kpi-box{grid-column:span 2}
 .challenges-grid{grid-template-columns:1fr 1fr}
 .audit-grid{grid-template-columns:repeat(2,1fr)}
-.kpi-grid{grid-template-columns:repeat(2,1fr)}
+/* kpi-grid stays 3 cols at 1100px — still fits fine */
 .stats-inner{grid-template-columns:repeat(2,1fr)}
 .stat-block:nth-child(2){border-right:none}
 .stat-block:nth-child(3){border-top:1px solid var(--border)}
@@ -506,6 +505,8 @@ max-width: 480px;
 .hero{grid-template-columns:1fr;min-height:auto;gap:48px;padding:60px 24px}
 .hero-visual{max-width:580px;margin:0 auto}
 .strategy-grid{grid-template-columns:1fr}
+/* kpi-grid drops to 2 cols at 900px */
+.kpi-grid{grid-template-columns:repeat(2,1fr)}
 }
 @media(max-width:700px){
 .nav-links{display:none;flex-direction:column;position:fixed;top:68px;left:0;right:0;bottom:0;background:var(--bg);padding:32px 24px;gap:28px;z-index:89;border-top:1px solid var(--border)}
@@ -514,7 +515,7 @@ max-width: 480px;
 .nav-hamburger{display:flex}
 .challenges-grid{grid-template-columns:1fr}
 .audit-grid{grid-template-columns:1fr 1fr}
-.kpi-grid{grid-template-columns:1fr 1fr}
+.kpi-grid{grid-template-columns:repeat(2,1fr)}
 .context-grid{grid-template-columns:1fr}
 .kpi-box{grid-column:auto}
 .hero-badge-float{display:none}
@@ -1056,7 +1057,6 @@ PageSpeed 24 → 51+
 </div>
 
 <!-- Pillar 4 -->
-<!-- Pillar 4 -->
 <div class="strat-card fade-up" data-delay="2">
 
 <div class="strat-head">
@@ -1228,6 +1228,7 @@ A phased approach — technical foundations first, then on-page, then authority 
 </div>
 </div>
 </section>
+
 <!-- RESULTS -->
 <section class="section alt" id="results">
 <div class="container">
@@ -1239,202 +1240,87 @@ A phased approach — technical foundations first, then on-page, then authority 
 <div class="kpi-grid" id="kpiGrid">
 
 <div class="kpi-result-card fade-up" data-delay="1">
-
 <div class="kpi-mname">Core Web Vitals Optimization</div>
-
-<div class="kpi-was">
-was 24 Mobile &amp; 26 Desktop Performance Score
-</div>
-
+<div class="kpi-was">was 24 Mobile &amp; 26 Desktop Performance Score</div>
 <div class="kpi-val">51+</div>
-
 <span class="kpi-badge up">↑ +112%</span>
-
-<div class="popup-img-wrap"
-data-caption="Core Web Vitals improvement — Mobile 24 → 51 · Desktop 26 → 50 · Faster loading & better UX">
-
-<img src="pu-final-Core-web.png"
-alt="Pumalift Core Web Vitals optimization comparison"
-onerror="this.parentNode.classList.add('broken')">
-
+<div class="popup-img-wrap" data-caption="Core Web Vitals improvement — Mobile 24 → 51 · Desktop 26 → 50 · Faster loading & better UX">
+<img src="pu-final-Core-web.png" alt="Pumalift Core Web Vitals optimization comparison" onerror="this.parentNode.classList.add('broken')">
 <div class="img-placeholder" style="display:none">
-
 <div class="ph-icon">⚡</div>
-
-<div class="ph-text">
-Core Web Vitals<br>
-24 → 51 Score
+<div class="ph-text">Core Web Vitals<br>24 → 51 Score</div>
 </div>
-
 </div>
 </div>
 
-</div>
-
-  <div class="kpi-result-card fade-up" data-delay="5">
-
+<div class="kpi-result-card fade-up" data-delay="5">
 <div class="kpi-mname">Keyword Rankings Growth</div>
-
-<div class="kpi-was">
-was limited keyword visibility with low SERP positioning
-</div>
-
+<div class="kpi-was">was limited keyword visibility with low SERP positioning</div>
 <div class="kpi-val">Top 20 Rankings</div>
-
 <span class="kpi-badge up">↑ Organic Keyword Growth</span>
-
-<div class="popup-img-wrap"
-data-caption="Keyword ranking improvements across product and commercial intent keywords">
-
-<img src="pu-final-Keywor ranking.png"
-alt="Pumalift keyword rankings growth report"
-onerror="this.parentNode.classList.add('broken')">
-
+<div class="popup-img-wrap" data-caption="Keyword ranking improvements across product and commercial intent keywords">
+<img src="pu-final-Keywor ranking.png" alt="Pumalift keyword rankings growth report" onerror="this.parentNode.classList.add('broken')">
 <div class="img-placeholder" style="display:none">
-
 <div class="ph-icon">📊</div>
-
-<div class="ph-text">
-Keyword Rankings<br>
-Top 20 Growth
+<div class="ph-text">Keyword Rankings<br>Top 20 Growth</div>
 </div>
-
 </div>
 </div>
 
-</div>
-  
 <div class="kpi-result-card fade-up" data-delay="2">
-
 <div class="kpi-mname">Google Search Impressions</div>
-
-<div class="kpi-was">
-was low search visibility with limited keyword reach
-</div>
-
+<div class="kpi-was">was low search visibility with limited keyword reach</div>
 <div class="kpi-val">37.4K</div>
-
 <span class="kpi-badge up">↑ Organic Visibility Growth</span>
-
-<div class="popup-img-wrap"
-data-caption="Google Search Console impression growth — increased visibility through SEO & GEO optimization">
-
-<img src="pu-imoression-growth.png"
-alt="Pumalift Google Search Console impression growth report"
-onerror="this.parentNode.classList.add('broken')">
-
+<div class="popup-img-wrap" data-caption="Google Search Console impression growth — increased visibility through SEO & GEO optimization">
+<img src="pu-imoression-growth.png" alt="Pumalift Google Search Console impression growth report" onerror="this.parentNode.classList.add('broken')">
 <div class="img-placeholder" style="display:none">
-
 <div class="ph-icon">📈</div>
-
-<div class="ph-text">
-Impression Growth<br>
-37.4K Impressions
-</div>
-
+<div class="ph-text">Impression Growth<br>37.4K Impressions</div>
 </div>
 </div>
-
 </div>
 
 <div class="kpi-result-card fade-up" data-delay="3">
-
 <div class="kpi-mname">Referring Domains &amp; Authority</div>
-
-<div class="kpi-was">
-was low authority with limited referring domains
-</div>
-
+<div class="kpi-was">was low authority with limited referring domains</div>
 <div class="kpi-val">1.3K</div>
-
 <span class="kpi-badge up">↑ Authority Growth</span>
-
-<div class="popup-img-wrap"
-data-caption="Domain authority and referring domain growth through strategic backlink acquisition">
-
-<img src="final-pu-authority.png"
-alt="Pumalift domain authority and referring domains report"
-onerror="this.parentNode.classList.add('broken')">
-
+<div class="popup-img-wrap" data-caption="Domain authority and referring domain growth through strategic backlink acquisition">
+<img src="final-pu-authority.png" alt="Pumalift domain authority and referring domains report" onerror="this.parentNode.classList.add('broken')">
 <div class="img-placeholder" style="display:none">
-
 <div class="ph-icon">🔗</div>
-
-<div class="ph-text">
-Authority Growth<br>
-1.3K Referring Domains
-</div>
-
+<div class="ph-text">Authority Growth<br>1.3K Referring Domains</div>
 </div>
 </div>
-
 </div>
-
 
 <div class="kpi-result-card fade-up" data-delay="4">
-
 <div class="kpi-mname">Organic Click Through Rate</div>
-
-<div class="kpi-was">
-was low CTR with weak meta title and search intent optimization
-</div>
-
+<div class="kpi-was">was low CTR with weak meta title and search intent optimization</div>
 <div class="kpi-val">3.6%</div>
-
 <span class="kpi-badge up">↑ Higher SERP Engagement</span>
-
-<div class="popup-img-wrap"
-data-caption="CTR improvement through optimized meta titles, descriptions, and search intent targeting">
-
-<img src="pu-final-ctr.png"
-alt="Pumalift organic CTR growth report from Google Search Console"
-onerror="this.parentNode.classList.add('broken')">
-
+<div class="popup-img-wrap" data-caption="CTR improvement through optimized meta titles, descriptions, and search intent targeting">
+<img src="pu-final-ctr.png" alt="Pumalift organic CTR growth report from Google Search Console" onerror="this.parentNode.classList.add('broken')">
 <div class="img-placeholder" style="display:none">
-
 <div class="ph-icon">🖱️</div>
-
-<div class="ph-text">
-CTR Growth<br>
-3.6% Organic CTR
-</div>
-
+<div class="ph-text">CTR Growth<br>3.6% Organic CTR</div>
 </div>
 </div>
-
 </div>
 
 <div class="kpi-result-card fade-up" data-delay="6">
-
 <div class="kpi-mname">GEO Optimization Visibility</div>
-
-<div class="kpi-was">
-was not optimized for AI search engines and generative search results
-</div>
-
+<div class="kpi-was">was not optimized for AI search engines and generative search results</div>
 <div class="kpi-val">AI Citations</div>
-
 <span class="kpi-badge up">↑ ChatGPT Visibility</span>
-
-<div class="popup-img-wrap"
-data-caption="GEO optimization results — improved visibility in ChatGPT and AI-powered search responses">
-
-<img src="final-pu-geo-optimization-.png"
-alt="Pumalift GEO optimization visibility in ChatGPT"
-onerror="this.parentNode.classList.add('broken')">
-
+<div class="popup-img-wrap" data-caption="GEO optimization results — improved visibility in ChatGPT and AI-powered search responses">
+<img src="final-pu-geo-optimization-.png" alt="Pumalift GEO optimization visibility in ChatGPT" onerror="this.parentNode.classList.add('broken')">
 <div class="img-placeholder" style="display:none">
-
 <div class="ph-icon">🤖</div>
-
-<div class="ph-text">
-GEO Optimization<br>
-AI Search Visibility
-</div>
-
+<div class="ph-text">GEO Optimization<br>AI Search Visibility</div>
 </div>
 </div>
-
 </div>
 
 </div>
