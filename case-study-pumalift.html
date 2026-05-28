@@ -183,6 +183,10 @@ body::before{content:'';position:fixed;inset:0;z-index:1;pointer-events:none;bac
 .ch-desc{font-size:0.83rem;color:var(--t2);line-height:1.65;margin-bottom:16px}
 .ch-badge{display:inline-block;background:rgba(255,82,82,0.1);border:1px solid rgba(255,82,82,0.25);border-radius:6px;padding:4px 12px;font-family:var(--font-mono);font-size:10px;color:var(--red);font-weight:500}
 
+/* ============================================================
+  UNIVERSAL POPUP IMAGE WRAPPER
+  Works for: .popup-img-wrap (used everywhere in this file)
+  ============================================================ */
 .popup-img-wrap {
 margin-top: 14px;
 border-radius: 10px;
@@ -220,6 +224,7 @@ transition: transform 0.35s var(--ease);
 }
 .popup-img-wrap:hover img { transform: scale(1.04); }
 
+/* Placeholder image block shown when src is missing/broken */
 .img-placeholder {
 width: 100%;
 min-height: 110px;
@@ -337,7 +342,9 @@ footer{border-top:1px solid var(--border);padding:28px;position:relative;z-index
 .fade-left.in{opacity:1;transform:translateX(0)}
 [data-delay="1"]{transition-delay:0.1s}[data-delay="2"]{transition-delay:0.2s}[data-delay="3"]{transition-delay:0.3s}[data-delay="4"]{transition-delay:0.4s}[data-delay="5"]{transition-delay:0.5s}[data-delay="6"]{transition-delay:0.6s}
 
-/* POPUP / LIGHTBOX */
+/* ============================================================
+  POPUP / LIGHTBOX
+  ============================================================ */
 #imgPopup {
 display: none;
 position: fixed;
@@ -430,6 +437,7 @@ border-color: #00e5ff;
 transform: rotate(90deg) scale(1.15);
 }
 
+/* Placeholder popup panel (shown when image file is missing) */
 #popupPlaceholder {
 display: none;
 flex-direction: column;
@@ -522,7 +530,6 @@ max-width: 480px;
 </style>
 </head>
 <body>
-
 <!-- Mesh background -->
 <div class="mesh" aria-hidden="true">
 <div class="mesh-orb"></div>
