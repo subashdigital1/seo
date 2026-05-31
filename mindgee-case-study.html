@@ -791,17 +791,27 @@ Every card below was a live problem on the site.
 
 <!-- CARD 01 -->
 <div class="audit-card fade-up" data-delay="1">
-<div class="audit-step">01 / Technical</div>
-<span class="audit-emoji">⚡</span>
-<div class="audit-name">Poor Core Web Vitals</div>
-<div class="audit-desc">All three Core Web Vitals failing on mobile and desktop.</div>
-<div class="popup-img-wrap" data-caption="Step 01 — Technical Audit: crawl errors, redirects, Core Web Vitals">
-<img src="mindgee-dashboard-gsc.png" alt="Technical audit screenshot" onerror="this.parentNode.classList.add('broken')">
-<div class="img-placeholder" style="display:none">
-<div class="ph-icon">🔬</div>
-<div class="ph-text">Technical Audit<br>Crawl errors & Core Web Vitals</div>
-</div>
-</div>
+  <div class="audit-step">01 / Technical</div>
+  <span class="audit-emoji">⚡</span>
+
+  <div class="audit-name">Poor Core Web Vitals</div>
+
+  <div class="audit-desc">
+    Desktop performance score dropped to 31 with a critical Largest Contentful Paint (LCP) of 14.8s, causing poor user experience and reduced page speed performance.
+  </div>
+
+  <div class="popup-img-wrap" data-caption="Step 01 — Core Web Vitals Audit: Performance Score 31 and LCP 14.8s">
+    <img src="mindgee-page speed.png" alt="Core Web Vitals audit screenshot"
+      onerror="this.parentNode.classList.add('broken')">
+
+    <div class="img-placeholder" style="display:none">
+      <div class="ph-icon">⚡</div>
+      <div class="ph-text">
+        Core Web Vitals Audit<br>
+        Performance Score 31 & LCP 14.8s
+      </div>
+    </div>
+  </div>
 </div>
 
 <!-- CARD 02 -->
@@ -821,39 +831,79 @@ Every card below was a live problem on the site.
 
 <!-- CARD 03 -->
 <div class="audit-card fade-up" data-delay="3">
-<div class="audit-step">03 / CTR</div>
-<span class="audit-emoji">🖱</span>
-<div class="audit-name">Low Click-Through Rate</div>
-<div class="audit-desc">Average CTR of 1% despite appearing in search results. Titles and meta descriptions not optimised for SERP appeal.</div>
-<div class="popup-img-wrap" data-caption="GSC CTR report — average 1% click-through rate">
-<img src="EX 9 C LOW CTR.png" alt="CTR screenshot" onerror="this.parentNode.classList.add('broken')">
-<div class="img-placeholder" style="display:none">
-<div class="ph-icon">🖱</div>
-<div class="ph-text">GSC Performance Report<br>CTR: 1%</div>
-</div>
-</div>
+  <div class="audit-step">03 / CTR</div>
+  <span class="audit-emoji">🖱</span>
+
+  <div class="audit-name">Low CTR & Poor Average Position</div>
+
+  <div class="audit-desc">
+    Search visibility generated 198K impressions, but CTR remained at just 0.7% with an average position of 50.7. Key pages lacked compelling titles, meta descriptions, and SERP optimisation.
+  </div>
+
+  <div class="popup-img-wrap" data-caption="Step 03 — GSC Performance Audit: CTR 0.7% and Average Position 50.7">
+    <img src="EX 9 C LOW CTR.png" alt="GSC CTR and Average Position report"
+      onerror="this.parentNode.classList.add('broken')">
+
+    <div class="img-placeholder" style="display:none">
+      <div class="ph-icon">🖱</div>
+      <div class="ph-text">
+        GSC Performance Report<br>
+        CTR: 0.7% | Position: 50.7
+      </div>
+    </div>
+  </div>
 </div>
 
 <!-- CARD 04 -->
 <div class="audit-card fade-up" data-delay="4">
-<div class="audit-step">04 / Topical Authority</div>
-<span class="audit-emoji">📚</span>
-<div class="audit-name">Lack of Topical Authority</div>
-<div class="audit-desc">Thin content ecosystem with weak semantic depth, poor topic clustering, limited entity coverage, and insufficient authority signals.</div>
-<div class="popup-img-wrap">
-<img src="EX-AD-Lack-of-authority.png" alt="Topical authority screenshot" onerror="this.parentNode.classList.add('broken')">
-</div>
+  <div class="audit-step">04 / GEO Visibility</div>
+  <span class="audit-emoji">🤖</span>
+
+  <div class="audit-name">Low AI Search Visibility</div>
+
+  <div class="audit-desc">
+    Brand visibility across AI search platforms was extremely limited, with low brand mentions, weak prompt coverage, and minimal presence in AI-generated recommendations compared to competitors.
+  </div>
+
+  <div class="popup-img-wrap" data-caption="Step 04 — GEO Audit: AI search visibility and brand mention analysis">
+    <img src="EX-AD-Lack-of-authority.png"
+         alt="GEO audit report screenshot"
+         onerror="this.parentNode.classList.add('broken')">
+
+    <div class="img-placeholder" style="display:none">
+      <div class="ph-icon">🤖</div>
+      <div class="ph-text">
+        GEO Audit Report<br>
+        Low AI Search Visibility
+      </div>
+    </div>
+  </div>
 </div>
 
 <!-- CARD 05 -->
-<div class="audit-card fade-up" data-delay="1">
-<div class="audit-step">05 / Entity Optimization</div>
-<span class="audit-emoji">🔍</span>
-<div class="audit-name">Weak Entity & Context Optimization</div>
-<div class="audit-desc">Content lacked strong entity relationships, semantic associations, contextual relevance, and NLP optimization.</div>
-<div class="popup-img-wrap">
-<img src="ex-ad-entity.png" alt="Entity optimization screenshot" onerror="this.parentNode.classList.add('broken')">
-</div>
+<div class="audit-card fade-up" data-delay="5">
+  <div class="audit-step">05 / Schema</div>
+  <span class="audit-emoji">🏷️</span>
+
+  <div class="audit-name">Limited Structured Data Coverage</div>
+
+  <div class="audit-desc">
+    Basic schema markup was implemented, but advanced structured data opportunities were missing. Service, FAQ, Review, and Local Business schemas were not fully utilized to maximize search visibility and AI understanding.
+  </div>
+
+  <div class="popup-img-wrap" data-caption="Step 05 — Schema Audit: Structured data coverage analysis">
+    <img src="ex-ad-entity.png"
+         alt="Schema validation screenshot"
+         onerror="this.parentNode.classList.add('broken')">
+
+    <div class="img-placeholder" style="display:none">
+      <div class="ph-icon">🏷️</div>
+      <div class="ph-text">
+        Schema Audit<br>
+        Limited Structured Data Coverage
+      </div>
+    </div>
+  </div>
 </div>
 
 <!-- CARD 06 -->
@@ -864,39 +914,6 @@ Every card below was a live problem on the site.
 <div class="audit-desc">Content was not structured for AI citations, lacking GEO optimization, trust signals, and retrieval-friendly formatting.</div>
 <div class="popup-img-wrap">
 <img src="ex-no-cititaion.png" alt="AI citation screenshot" onerror="this.parentNode.classList.add('broken')">
-</div>
-</div>
-
-<!-- CARD 07 -->
-<div class="audit-card fade-up" data-delay="3">
-<div class="audit-step">07 / Answer Optimization</div>
-<span class="audit-emoji">💬</span>
-<div class="audit-name">No Direct Answer Optimization</div>
-<div class="audit-desc">Content lacked concise, extractable answers and conversational formatting required for AI Overviews and featured snippets.</div>
-<div class="popup-img-wrap">
-<img src="No-Direct-Answer.png" alt="Schema screenshot" onerror="this.parentNode.classList.add('broken')">
-</div>
-</div>
-
-<!-- CARD 08 -->
-<div class="audit-card fade-up" data-delay="4">
-<div class="audit-step">08 / Structured Data</div>
-<span class="audit-emoji">🧩</span>
-<div class="audit-name">Missing Structured Data (Schema)</div>
-<div class="audit-desc">Website lacked FAQ, HowTo, Article, and Organization schema markup, reducing machine readability and AI extraction capabilities.</div>
-<div class="popup-img-wrap">
-<img src="EX-no faq,Article, organisation.png" alt="Schema screenshot" onerror="this.parentNode.classList.add('broken')">
-</div>
-</div>
-
-<!-- CARD 09 -->
-<div class="audit-card fade-up" data-delay="1">
-<div class="audit-step">09 / Content Readability</div>
-<span class="audit-emoji">📖</span>
-<div class="audit-name">Poor Content Chunking & Readability</div>
-<div class="audit-desc">Large content blocks, weak hierarchy, and low scannability created poor user experience and reduced AI-friendly content interpretation.</div>
-<div class="popup-img-wrap">
-<img src="ex-Poor-Content-Chunking.png" alt="Readability screenshot" onerror="this.parentNode.classList.add('broken')">
 </div>
 </div>
 
