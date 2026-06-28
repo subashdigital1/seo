@@ -986,32 +986,498 @@ footer{border-top:1px solid var(--border);padding:28px;position:relative;z-index
     </div>
 
     <!-- KPI TABLE -->
-    <div style="margin-top:48px" class="fade-up">
-      <div style="margin-bottom:16px">
-        <span style="font-family:var(--font-head);font-size:1rem;font-weight:700">📊 Before vs After — Full KPI Comparison</span>
-      </div>
-      <div class="kpi-table-wrap">
-        <table class="kpi-table">
-          <thead>
-            <tr><th>Metric</th><th>Before</th><th>After</th><th>Change</th></tr>
-          </thead>
-          <tbody>
-            <tr><td class="td-name">Monthly Organic Traffic</td><td class="td-before">Baseline</td><td class="td-after">+150% Growth</td><td class="td-change">+150%</td></tr>
-            <tr><td class="td-name">Top 10 Ranking Keywords</td><td class="td-before">&lt;20 keywords</td><td class="td-after">80+ keywords</td><td class="td-change">+4× Growth</td></tr>
-            <tr><td class="td-name">Desktop PageSpeed Score</td><td class="td-before">~55</td><td class="td-after">92+</td><td class="td-change">+37 pts</td></tr>
-            <tr><td class="td-name">Average CTR (all pages)</td><td class="td-before">Low baseline</td><td class="td-after">2.8%</td><td class="td-change">Improved</td></tr>
-            <tr><td class="td-name">Index Coverage</td><td class="td-before">Partial</td><td class="td-after">100% core pages</td><td class="td-change">Full</td></tr>
-            <tr><td class="td-name">Schema Types Implemented</td><td class="td-before">0</td><td class="td-after">5 types live</td><td class="td-change">From scratch</td></tr>
-            <tr><td class="td-name">Google Business Profile</td><td class="td-before">Incomplete</td><td class="td-after">Fully optimized</td><td class="td-change">Completed</td></tr>
-            <tr><td class="td-name">Industry Content Clusters</td><td class="td-before">0</td><td class="td-after">17 clusters built</td><td class="td-change">Full build-out</td></tr>
-            <tr><td class="td-name">Hreflang (CA/US)</td><td class="td-before">Not implemented</td><td class="td-after">Live</td><td class="td-change">Deployed</td></tr>
-            <tr><td class="td-name">B2B Directory Citations</td><td class="td-before">0</td><td class="td-after">ThomasNet, Kompass +</td><td class="td-change">New Channel</td></tr>
-          </tbody>
-        </table>
-      </div>
+  ```html
+<section class="section" id="results">
+  <div class="container">
+
+    <div class="section-head fade-up">
+      <div class="section-label">Final Results</div>
+      <h2 class="sec-title">Before vs <span class="cyan">After SEO Growth</span></h2>
+      <p class="sec-sub">
+        A complete comparison of Technical SEO, Content Strategy, Authority Building,
+        GEO Optimization and overall search performance improvements.
+      </p>
     </div>
+
+    <!-- KPI Cards -->
+    <div class="kpi-grid">
+
+      <!-- Core Web Vitals -->
+      <div class="kpi-result-card fade-up" data-delay="1">
+        <div class="kpi-mname">Core Web Vitals</div>
+        <div class="kpi-was">Performance Score</div>
+        <div class="kpi-val">35 → 60</div>
+        <span class="kpi-badge">↑ +71% Improvement</span>
+
+        <div class="popup-img-wrap" style="margin-top:16px"
+          data-caption="Core Web Vitals Improvement — Google PageSpeed Insights">
+          <img src="gs-final-speed.png" alt="Core Web Vitals Growth">
+
+          <div class="img-placeholder">
+            <div class="ph-icon">⚡</div>
+            <div class="ph-text">
+              Core Web Vitals<br>
+              35 → 60
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTR -->
+
+      <div class="kpi-result-card fade-up" data-delay="2">
+
+        <div class="kpi-mname">Average CTR</div>
+
+        <div class="kpi-was">Google Search Console</div>
+
+        <div class="kpi-val">0.9% → 9.7%</div>
+
+        <span class="kpi-badge">↑ +978% Growth</span>
+
+        <div class="popup-img-wrap" style="margin-top:16px"
+          data-caption="Average CTR Growth">
+
+          <img src="gs-final-avg-ctr.png" alt="CTR Growth">
+
+          <div class="img-placeholder">
+
+            <div class="ph-icon">📈</div>
+
+            <div class="ph-text">
+
+              Average CTR<br>
+
+              0.9% → 9.7%
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Domain Authority -->
+
+      <div class="kpi-result-card fade-up" data-delay="3">
+
+        <div class="kpi-mname">Domain Authority</div>
+
+        <div class="kpi-was">Authority Score</div>
+
+        <div class="kpi-val">18 → 20</div>
+
+        <span class="kpi-badge">↑ +11% Growth</span>
+
+        <div class="popup-img-wrap" style="margin-top:16px"
+          data-caption="Domain Authority Growth">
+
+          <img src="gs-final-DA.png" alt="Domain Authority">
+
+          <div class="img-placeholder">
+
+            <div class="ph-icon">🔗</div>
+
+            <div class="ph-text">
+
+              Domain Authority<br>
+
+              18 → 20
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- GEO Visibility -->
+
+      <div class="kpi-result-card fade-up" data-delay="4">
+
+        <div class="kpi-mname">GEO Visibility</div>
+
+        <div class="kpi-was">AI Search Presence</div>
+
+        <div class="kpi-val">+85%</div>
+
+        <span class="kpi-badge">↑ AI Growth</span>
+
+        <div class="popup-img-wrap" style="margin-top:16px"
+          data-caption="GEO Visibility">
+
+          <img src="gs-geo.png" alt="GEO Visibility">
+
+          <div class="img-placeholder">
+
+            <div class="ph-icon">🤖</div>
+
+            <div class="ph-text">
+
+              GEO Visibility<br>
+
+              +85%
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Schema -->
+
+      <div class="kpi-result-card fade-up" data-delay="5">
+
+        <div class="kpi-mname">Schema Implementation</div>
+
+        <div class="kpi-was">Structured Data</div>
+
+        <div class="kpi-val">4 Schemas</div>
+
+        <span class="kpi-badge">✓ 0 Errors</span>
+
+        <div class="popup-img-wrap" style="margin-top:16px"
+          data-caption="Schema Implementation">
+
+          <img src="gs-final-schema.png" alt="Schema">
+
+          <div class="img-placeholder">
+
+            <div class="ph-icon">🏷️</div>
+
+            <div class="ph-text">
+
+              4 Schema Types
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- AI Ranking -->
+
+      <div class="kpi-result-card fade-up" data-delay="6">
+
+        <div class="kpi-mname">AI Search Visibility</div>
+
+        <div class="kpi-was">GEO Rankings</div>
+
+        <div class="kpi-val">Top Results</div>
+
+        <span class="kpi-badge">🤖 AI Featured</span>
+
+        <div class="popup-img-wrap" style="margin-top:16px"
+          data-caption="ChatGPT & Perplexity Rankings">
+
+          <img src="gs-final-geo-ranking.png" alt="AI Ranking">
+
+          <div class="img-placeholder">
+
+            <div class="ph-icon">🤖</div>
+
+            <div class="ph-text">
+
+              ChatGPT<br>
+
+              Perplexity
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- AI Traffic -->
+
+      <div class="kpi-result-card fade-up" data-delay="7">
+
+        <div class="kpi-mname">AI Referral Traffic</div>
+
+        <div class="kpi-was">Google Analytics 4</div>
+
+        <div class="kpi-val">215 Sessions</div>
+
+        <span class="kpi-badge">↑ New Channel</span>
+
+        <div class="popup-img-wrap" style="margin-top:16px"
+          data-caption="AI Referral Traffic">
+
+          <img src="gs-final-analytics.png" alt="Analytics">
+
+          <div class="img-placeholder">
+
+            <div class="ph-icon">📊</div>
+
+            <div class="ph-text">
+
+              AI Traffic
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Impressions -->
+
+      <div class="kpi-result-card fade-up" data-delay="8">
+
+        <div class="kpi-mname">Search Impressions</div>
+
+        <div class="kpi-was">Google Search Console</div>
+
+        <div class="kpi-val">42.1K → 43K</div>
+
+        <span class="kpi-badge">↑ +2.1%</span>
+
+        <div class="popup-img-wrap" style="margin-top:16px"
+          data-caption="Search Impressions">
+
+          <img src="gs-final-impression-click-.png" alt="Impressions">
+
+          <div class="img-placeholder">
+
+            <div class="ph-icon">👁️</div>
+
+            <div class="ph-text">
+
+              Search Impressions
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+
+    <!-- KPI Comparison Table -->
+
+    <div style="margin-top:60px" class="fade-up">
+
+      <div style="margin-bottom:18px">
+
+        <span style="font-family:var(--font-head);font-size:1.15rem;font-weight:800">
+
+          📊 Before vs After — Complete SEO & GEO Performance Comparison
+
+        </span>
+
+        <p style="margin-top:8px;color:var(--muted);font-size:.95rem">
+
+          Overall measurable improvements achieved after implementing Technical SEO,
+
+          Content Strategy, Link Building, Schema and GEO Optimization.
+
+        </p>
+
+      </div>
+
+      <div class="kpi-table-wrap">
+
+        <table class="kpi-table">
+
+          <thead>
+
+            <tr>
+
+              <th>Metric</th>
+
+              <th>Before</th>
+
+              <th>After</th>
+
+              <th>Improvement</th>
+
+            </tr>
+
+          </thead>
+
+          <tbody>
+
+            <tr>
+
+              <td class="td-name">Desktop PageSpeed Score</td>
+
+              <td class="td-before">35</td>
+
+              <td class="td-after">60</td>
+
+              <td class="td-change">+71%</td>
+
+            </tr>
+
+            <tr>
+
+              <td class="td-name">Average CTR</td>
+
+              <td class="td-before">0.9%</td>
+
+              <td class="td-after">9.7%</td>
+
+              <td class="td-change">+978%</td>
+
+            </tr>
+
+            <tr>
+
+              <td class="td-name">Average Position</td>
+
+              <td class="td-before">37.6</td>
+
+              <td class="td-after">31</td>
+
+              <td class="td-change">↑ Better Rankings</td>
+
+            </tr>
+
+            <tr>
+
+              <td class="td-name">Search Impressions</td>
+
+              <td class="td-before">42.1K</td>
+
+              <td class="td-after">43K</td>
+
+              <td class="td-change">+2.1%</td>
+
+            </tr>
+
+            <tr>
+
+              <td class="td-name">Domain Authority</td>
+
+              <td class="td-before">18</td>
+
+              <td class="td-after">20</td>
+
+              <td class="td-change">+11%</td>
+
+            </tr>
+
+            <tr>
+
+              <td class="td-name">Linking Root Domains</td>
+
+              <td class="td-before">422</td>
+
+              <td class="td-after">434</td>
+
+              <td class="td-change">+12</td>
+
+            </tr>
+
+            <tr>
+
+              <td class="td-name">Ranking Keywords</td>
+
+              <td class="td-before">140</td>
+
+              <td class="td-after">161</td>
+
+              <td class="td-change">+21 Keywords</td>
+
+            </tr>
+
+            <tr>
+
+              <td class="td-name">Spam Score</td>
+
+              <td class="td-before">55%</td>
+
+              <td class="td-after">41%</td>
+
+              <td class="td-change">−14%</td>
+
+            </tr>
+
+            <tr>
+
+              <td class="td-name">Schema Implementation</td>
+
+              <td class="td-before">Breadcrumb Only</td>
+
+              <td class="td-after">Organization, Website,<br>Product, Breadcrumb</td>
+
+              <td class="td-change">4 Types Live</td>
+
+            </tr>
+
+            <tr>
+
+              <td class="td-name">Schema Validation</td>
+
+              <td class="td-before">Limited</td>
+
+              <td class="td-after">0 Errors / 0 Warnings</td>
+
+              <td class="td-change">Resolved</td>
+
+            </tr>
+
+            <tr>
+
+              <td class="td-name">AI Search Visibility</td>
+
+              <td class="td-before">No Presence</td>
+
+              <td class="td-after">ChatGPT & Perplexity</td>
+
+              <td class="td-change">Featured</td>
+
+            </tr>
+
+            <tr>
+
+              <td class="td-name">GEO Visibility</td>
+
+              <td class="td-before">Low</td>
+
+              <td class="td-after">+85%</td>
+
+              <td class="td-change">Strong Growth</td>
+
+            </tr>
+
+            <tr>
+
+              <td class="td-name">AI Referral Traffic</td>
+
+              <td class="td-before">0 Sessions</td>
+
+              <td class="td-after">215 Sessions</td>
+
+              <td class="td-change">New Channel</td>
+
+            </tr>
+
+          </tbody>
+
+        </table>
+
+      </div>
+
+    </div>
+
   </div>
 </section>
+```
+
 
 <!-- ============================================================ TOOLS -->
 <section class="section alt" id="tools">
