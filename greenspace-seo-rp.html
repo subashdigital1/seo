@@ -494,7 +494,7 @@ footer{border-top:1px solid var(--border);padding:28px;position:relative;z-index
   <span class="audit-emoji">⚡</span>
   <div class="audit-name">Poor Core Web Vitals &amp; PageSpeed Performance</div>
   <div class="audit-desc">
-    Google PageSpeed Insights revealed critical Core Web Vitals issues across both mobile and desktop. Mobile Performance scored 30/100 and Desktop scored 35/100, with slow Largest Contentful Paint (LCP), render-blocking resources, unused JavaScript, unoptimized images, and delayed page rendering significantly impacting user experience, crawl efficiency, and organic search performance.
+    Mobile and desktop PageSpeed scores were below Google's recommended standards, with poor Core Web Vitals affecting user experience, crawl efficiency, and organic search visibility. Performance optimization was prioritized.
   </div>
 
   <div class="popup-img-wrap" data-caption="Step 01 — Performance Audit: Poor Core Web Vitals and PageSpeed Issues">
@@ -509,49 +509,93 @@ footer{border-top:1px solid var(--border);padding:28px;position:relative;z-index
   </div>
 </div>
 
-      <div class="audit-card fade-up" data-delay="2">
-        <div class="audit-step">02 / Rankings</div>
-        <span class="audit-emoji">📉</span>
-        <div class="audit-name">Low Rankings for Core Service Pages</div>
-        <div class="audit-desc">Key commercial pages — pallet racking, ASRS, mezzanines, conveyor systems — were not ranking on Page 1 despite strong product pages. Keyword targeting was missing or misaligned.</div>
-        <div class="popup-img-wrap" data-caption="Keyword Ranking Report — core service pages not ranking Page 1">
-          <img src="gs-keyword-rankings.png" alt="Keyword rankings screenshot">
-          <div class="img-placeholder"><div class="ph-icon">📉</div><div class="ph-text">Keyword Rankings Report<br>Core Services Not Ranking</div></div>
-        </div>
-      </div>
+     <div class="audit-card fade-up" data-delay="2">
+  <div class="audit-step">02 / Search Performance</div>
+  <span class="audit-emoji">📊</span>
 
-      <div class="audit-card fade-up" data-delay="3">
-        <div class="audit-step">03 / CTR</div>
-        <span class="audit-emoji">🖱</span>
-        <div class="audit-name">Low CTR Despite Impression Volume</div>
-        <div class="audit-desc">GSC showed thousands of impressions with a low CTR. Generic or duplicate meta titles across industry pages made SERP listings unappealing to B2B buyers scanning results.</div>
-        <div class="popup-img-wrap" data-caption="Step 03 — GSC Performance Audit: low CTR across industry and service pages">
-          <img src="gs-low-ctr.png" alt="GSC CTR and Average Position report">
-          <div class="img-placeholder"><div class="ph-icon">🖱</div><div class="ph-text">GSC Performance Report<br>Low CTR · High Impressions</div></div>
-        </div>
+  <div class="audit-name">Low CTR & Poor Average Search Position</div>
+
+  <div class="audit-desc">
+    Google Search Console showed strong impressions but a low click-through rate and weak average positions. Metadata, search intent alignment, and SERP optimization required improvements to increase organic clicks.
+  </div>
+
+  <div class="popup-img-wrap" data-caption="Step 02 — Search Performance Audit: Low CTR & Average Position Analysis">
+    <img src="gs-low-ctr-average-position.png" alt="Google Search Console Low CTR and Average Position Report">
+    <div class="img-placeholder">
+      <div class="ph-icon">📊</div>
+      <div class="ph-text">
+        Search Performance Audit<br>
+        Low CTR & Average Position
       </div>
+    </div>
+  </div>
+</div>
+
+     <div class="audit-card fade-up" data-delay="3">
+  <div class="audit-step">03 / Authority</div>
+  <span class="audit-emoji">🔗</span>
+
+  <div class="audit-name">Low Domain Authority & Weak Backlink Profile</div>
+
+  <div class="audit-desc">
+    Domain Authority remained low with limited high-quality referring domains, restricting keyword growth and overall search visibility. A strategic link-building campaign was required to strengthen domain trust.
+  </div>
+
+  <div class="popup-img-wrap" data-caption="Step 03 — Authority Audit: Domain Authority & Backlink Profile Analysis">
+    <img src="gs-domain-authority.png" alt="Domain Authority and Backlink Profile Report">
+    <div class="img-placeholder">
+      <div class="ph-icon">🔗</div>
+      <div class="ph-text">
+        Authority Audit<br>
+        Domain Authority Report
+      </div>
+    </div>
+  </div>
+</div>
 
       <div class="audit-card fade-up" data-delay="4">
-        <div class="audit-step">04 / Content</div>
-        <span class="audit-emoji">🗂️</span>
-        <div class="audit-name">Fragmented Topical Authority</div>
-        <div class="audit-desc">17 industry verticals had landing pages but no supporting blog content or internal linking. Google's topic model couldn't connect pages into a cohesive authority cluster.</div>
-        <div class="popup-img-wrap" data-caption="Step 04 — Content Audit: fragmented industry pages with no topical clusters">
-          <img src="gs-content-audit.png" alt="Content audit screenshot">
-          <div class="img-placeholder"><div class="ph-icon">🗂️</div><div class="ph-text">Content Audit<br>Fragmented Topical Authority</div></div>
-        </div>
+  <div class="audit-step">04 / GEO</div>
+  <span class="audit-emoji">🤖</span>
+
+  <div class="audit-name">Low AI Visibility & GEO Citation Coverage</div>
+
+  <div class="audit-desc">
+    The website had limited visibility across AI search engines and large language models. Content lacked entity optimization, authoritative citations, and structured signals required for Generative Engine Optimization (GEO).
+  </div>
+
+  <div class="popup-img-wrap" data-caption="Step 04 — GEO Audit: AI Search Visibility & Citation Analysis">
+    <img src="gs-geo-audit.png" alt="GEO Audit Report showing AI visibility and citation analysis">
+    <div class="img-placeholder">
+      <div class="ph-icon">🤖</div>
+      <div class="ph-text">
+        GEO Audit Report<br>
+        AI Visibility Analysis
       </div>
+    </div>
+  </div>
+</div>
 
       <div class="audit-card fade-up" data-delay="5">
-        <div class="audit-step">05 / Schema</div>
-        <span class="audit-emoji">🏷️</span>
-        <div class="audit-name">Zero Structured Data Implementation</div>
-        <div class="audit-desc">No schema markup existed across any page. Organization, Service, FAQPage, LocalBusiness, and BreadcrumbList opportunities were entirely missed — leaving rich result real estate on the table.</div>
-        <div class="popup-img-wrap" data-caption="Step 05 — Schema Audit: zero structured data across greenspaceind.com">
-          <img src="gs-schema-audit.png" alt="Schema validation screenshot">
-          <div class="img-placeholder"><div class="ph-icon">🏷️</div><div class="ph-text">Schema Audit<br>Zero Structured Data Found</div></div>
-        </div>
+  <div class="audit-step">05 / Structured Data</div>
+  <span class="audit-emoji">🏷️</span>
+
+  <div class="audit-name">Missing Schema Markup Implementation</div>
+
+  <div class="audit-desc">
+    Most pages lacked essential structured data, limiting rich results and search understanding. Key schemas such as Organization, Website, Product, FAQ, and Breadcrumb were missing or incomplete.
+  </div>
+
+  <div class="popup-img-wrap" data-caption="Step 05 — Structured Data Audit: Missing Schema Markup Analysis">
+    <img src="gs-schema-audit.png" alt="Schema Markup Validation Report">
+    <div class="img-placeholder">
+      <div class="ph-icon">🏷️</div>
+      <div class="ph-text">
+        Structured Data Audit<br>
+        Missing Schema Markup
       </div>
+    </div>
+  </div>
+</div>
 
       <div class="audit-card fade-up" data-delay="6">
         <div class="audit-step">06 / Local &amp; Geo</div>
