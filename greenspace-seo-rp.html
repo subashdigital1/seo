@@ -395,11 +395,11 @@ footer{border-top:1px solid var(--border);padding:28px;position:relative;z-index
         <div class="stat-lbl">Organic Traffic Growth</div>
       </div>
       <div class="stat-block fade-up" data-delay="1">
-        <div class="stat-num" data-target="80" data-suffix="+">0+</div>
+        <div class="stat-num" data-target="14" data-suffix="+">0+</div>
         <div class="stat-lbl">Top 10 Keywords</div>
       </div>
       <div class="stat-block fade-up" data-delay="2">
-        <div class="stat-num" data-target="92" data-suffix="">0</div>
+        <div class="stat-num" data-target="60" data-suffix="">0</div>
         <div class="stat-lbl">PageSpeed Score</div>
       </div>
       <div class="stat-block fade-up" data-delay="3">
@@ -463,7 +463,7 @@ footer{border-top:1px solid var(--border);padding:28px;position:relative;z-index
       <div class="kpi-box">
         <h3>🎯 Success KPIs Defined</h3>
         <div class="kpi-list-item"><span class="check">✓</span><span>Increase monthly organic visitors from Canada &amp; USA</span></div>
-        <div class="kpi-list-item"><span class="check">✓</span><span>Rank 80+ high-intent keywords in Top 10 (pallet racking, ASRS, mezzanine, conveyor systems)</span></div>
+        <div class="kpi-list-item"><span class="check">✓</span><span>Rank 14+ high-intent keywords in Top 10 (pallet racking, ASRS, mezzanine, conveyor systems)</span></div>
         <div class="kpi-list-item"><span class="check">✓</span><span>Fix Next.js technical SEO issues — metadata, rendering &amp; indexation</span></div>
         <div class="kpi-list-item"><span class="check">✓</span><span>Improve Core Web Vitals to 60+ desktop via Next.js image &amp; script optimization</span></div>
         <div class="kpi-list-item"><span class="check">✓</span><span>Build topical authority across all 17 targeted industry verticals</span></div>
@@ -513,19 +513,20 @@ footer{border-top:1px solid var(--border);padding:28px;position:relative;z-index
   <div class="audit-step">02 / Search Performance</div>
   <span class="audit-emoji">📊</span>
 
-  <div class="audit-name">Low CTR & Poor Average Search Position</div>
+  <div class="audit-name">Low CTR & Poor Average Position</div>
 
   <div class="audit-desc">
-    Google Search Console showed strong impressions but a low click-through rate and weak average positions. Metadata, search intent alignment, and SERP optimization required improvements to increase organic clicks.
+    Google Search Console reported only a 0.9% average CTR with an average search position of 38.1. Despite generating 44.4K impressions, the website received just 380 clicks, indicating poor SERP visibility and underperforming metadata.
   </div>
 
-  <div class="popup-img-wrap" data-caption="Step 02 — Search Performance Audit: Low CTR & Average Position Analysis">
-    <img src="gs-low-ctr-avg-postion" alt="Google Search Console Low CTR and Average Position Report">
+  <div class="popup-img-wrap"
+       data-caption="Google Search Console — 380 Clicks · 44.4K Impressions · 0.9% CTR · Average Position 38.1">
+    <img src="gs-low-ctr-avg-postion.png" alt="Google Search Console Search Performance Report">
     <div class="img-placeholder">
       <div class="ph-icon">📊</div>
       <div class="ph-text">
         Search Performance Audit<br>
-        Low CTR & Average Position
+        CTR 0.9% · Avg Position 38.1
       </div>
     </div>
   </div>
@@ -597,16 +598,28 @@ footer{border-top:1px solid var(--border);padding:28px;position:relative;z-index
   </div>
 </div>
 
-      <div class="audit-card fade-up" data-delay="6">
-        <div class="audit-step">06 / Local &amp; Geo</div>
-        <span class="audit-emoji">📍</span>
-        <div class="audit-name">Weak North America Geo Signals</div>
-        <div class="audit-desc">Despite serving all of Canada and the USA, geographic signals were underdeveloped. NAP consistency, Google Business Profile optimization, and hreflang for CA/US were absent or incomplete.</div>
-        <div class="popup-img-wrap" data-caption="Step 06 — Local SEO Audit: weak geographic signals for Canada and USA">
-          <img src="gs-local-audit.png" alt="Local SEO audit screenshot">
-          <div class="img-placeholder"><div class="ph-icon">📍</div><div class="ph-text">Local SEO Audit<br>Weak Geo Signals · CA + USA</div></div>
-        </div>
+      <div class="audit-card fade-up" data-delay="2">
+  <div class="audit-step">06 / Rankings</div>
+  <span class="audit-emoji">📉</span>
+
+  <div class="audit-name">Low Keyword Rankings</div>
+
+  <div class="audit-desc">
+    The website had very limited keyword visibility, with only 2 keywords ranking in the Top 10, 5 keywords in the Top 20, and no keywords in the Top 3. Organic visibility was just 3.25%, highlighting the need for a stronger SEO strategy.
+  </div>
+
+  <div class="popup-img-wrap"
+       data-caption="SEMrush Keyword Ranking Report — Visibility 3.25% · Top 3: 0 · Top 10: 2 · Top 20: 5">
+    <img src="gs-keyword-ranking.png" alt="SEMrush Keyword Ranking Report">
+    <div class="img-placeholder">
+      <div class="ph-icon">📉</div>
+      <div class="ph-text">
+        Keyword Ranking Report<br>
+        Visibility 3.25% · Top 10: 2
       </div>
+    </div>
+  </div>
+</div>
 
     </div>
   </div>
@@ -902,6 +915,27 @@ footer{border-top:1px solid var(--border);padding:28px;position:relative;z-index
   </div>
 </div>
 
+      <div class="kpi-result-card fade-up" data-delay="6">
+  <div class="kpi-mname">Keyword Rankings</div>
+
+  <div class="kpi-was">was 18 Top 10 Keywords</div>
+
+  <div class="kpi-val">14</div>
+
+  <span class="kpi-badge">Top 3: 2 → 11</span>
+
+  <div class="popup-img-wrap" style="margin-top:16px"
+       data-caption="Keyword Ranking Report — Visibility 1.17531% → 5.26415% | Top 3: 2 → 11 | Top 10: 18 → 14 | Top 20: 77 → 31">
+    <img src="gs-final-ranking.png" alt="Keyword Ranking Report">
+    <div class="img-placeholder">
+      <div class="ph-icon">📈</div>
+      <div class="ph-text">
+        Keyword Rankings<br>
+        Visibility 1.18% → 5.26%
+      </div>
+    </div>
+  </div>
+</div>
       
     </div>
 
