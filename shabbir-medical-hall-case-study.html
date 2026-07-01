@@ -156,6 +156,26 @@ body::before{content:'';position:fixed;inset:0;z-index:1;pointer-events:none;bac
 .audit-name{font-family:var(--font-head);font-size:1.4rem;font-weight:800;color:#fff;margin-bottom:14px;line-height:1.3;letter-spacing:-0.02em}
 .audit-desc{color:#cbd5e1;line-height:1.7;font-size:0.9rem;margin-bottom:20px}
 
+/* ============================================================
+   STRATEGY SECTION — 2-column × 3-row with problem/impact
+   ============================================================ */
+.strat-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:60px}
+.strat-card{background:#111827;border:1px solid rgba(255,255,255,0.08);border-radius:22px;padding:28px;position:relative;overflow:hidden;transition:0.35s ease}
+.strat-card:hover{transform:translateY(-6px);border-color:#22d3ee}
+.strat-step{font-family:var(--font-mono);font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:#94a3b8;margin-bottom:14px}
+.strat-emoji{font-size:30px;display:block;margin-bottom:16px}
+.strat-name{font-family:var(--font-head);font-size:1.3rem;font-weight:800;color:#fff;margin-bottom:14px;line-height:1.3;letter-spacing:-0.02em}
+/* RED problem line */
+.strat-problem{display:flex;align-items:flex-start;gap:8px;color:#f87171;font-size:0.85rem;font-weight:600;margin-bottom:14px;line-height:1.5;font-family:var(--font-body)}
+.strat-problem::before{content:'⚠';flex-shrink:0;margin-top:1px}
+/* Bullets */
+.strat-bullets{display:flex;flex-direction:column;gap:8px;margin-bottom:18px}
+.strat-bullet{display:flex;align-items:flex-start;gap:9px;font-size:0.85rem;color:#cbd5e1;line-height:1.6;font-family:var(--font-body)}
+.strat-bullet::before{content:'→';color:#00e5ff;flex-shrink:0;font-weight:700;margin-top:1px}
+/* GREEN impact bar */
+.strat-impact{background:rgba(0,230,118,0.08);border:1px solid rgba(0,230,118,0.2);border-radius:10px;padding:12px 16px;font-size:0.82rem;font-weight:600;color:#00e676;display:flex;align-items:center;gap:8px;margin-bottom:16px;font-family:var(--font-body)}
+.strat-impact::before{content:'📈';font-size:14px}
+
 /* TIMELINE */
 .timeline{display:flex;flex-direction:column;gap:16px;position:relative}
 .timeline::before{content:'';position:absolute;left:58px;top:28px;bottom:28px;width:1px;background:linear-gradient(to bottom,var(--cyan-border),rgba(0,229,255,0.05),transparent)}
@@ -264,6 +284,7 @@ footer{border-top:1px solid var(--border);padding:28px;position:relative;z-index
 }
 @media(max-width:900px){
   .hero{grid-template-columns:1fr;min-height:auto;gap:48px;padding:60px 24px}
+  .strat-grid{grid-template-columns:1fr}
 }
 @media(max-width:700px){
   .nav-links{display:none;flex-direction:column;position:fixed;top:68px;left:0;right:0;bottom:0;background:var(--bg);padding:32px 24px;gap:28px;z-index:89;border-top:1px solid var(--border)}
@@ -878,6 +899,10 @@ footer{border-top:1px solid var(--border);padding:28px;position:relative;z-index
     </div>
   </div>
 </div>
+
+    </div>
+  </div>
+</section>
 <!-- ============================================================ TIMELINE -->
 <section class="section alt" id="timeline">
   <div class="container">
