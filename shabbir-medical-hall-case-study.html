@@ -479,37 +479,70 @@ footer{border-top:1px solid var(--border);padding:28px;position:relative;z-index
     <div class="audit-grid">
 
       <div class="audit-card fade-up" data-delay="1">
-        <div class="audit-step">01 / Performance</div>
-        <span class="audit-emoji">⚡</span>
-        <div class="audit-name">Poor Core Web Vitals on Product Pages</div>
-        <div class="audit-desc">Mobile PageSpeed scores were weak across category and product listing pages, with heavy unoptimized product images and render-blocking scripts slowing first paint and hurting crawl efficiency.</div>
-        <div class="popup-img-wrap" data-caption="Step 01 — Performance Audit: Poor Core Web Vitals & PageSpeed Issues">
-          <img src="shabbir-pagespeed-audit.png" alt="Poor Core Web Vitals PageSpeed Insights Report">
-          <div class="img-placeholder"><div class="ph-icon">⚡</div><div class="ph-text">Performance Audit<br>Poor Core Web Vitals</div></div>
-        </div>
+  <div class="audit-step">01 / Performance</div>
+  <span class="audit-emoji">⚡</span>
+
+  <div class="audit-name">Poor Core Web Vitals & Mobile Performance</div>
+
+  <div class="audit-desc">
+    Mobile performance was below Google's recommended threshold, with a PageSpeed score of 57. Large images, render-blocking resources, and inefficient loading slowed page rendering, negatively impacting Core Web Vitals, user experience, and overall SEO performance.
+  </div>
+
+  <div class="popup-img-wrap" data-caption="Step 01 — Performance Audit: Poor Core Web Vitals & PageSpeed Issues">
+    <img src="shabbir-pagespeed-audit.png" alt="Poor Core Web Vitals PageSpeed Insights Report">
+    <div class="img-placeholder">
+      <div class="ph-icon">⚡</div>
+      <div class="ph-text">
+        Performance Audit<br>
+        Poor Core Web Vitals
       </div>
+    </div>
+  </div>
+</div>
 
       <div class="audit-card fade-up" data-delay="2">
-        <div class="audit-step">02 / Search Performance</div>
-        <span class="audit-emoji">📊</span>
-        <div class="audit-name">Low CTR &amp; Weak Average Position</div>
-        <div class="audit-desc">Google Search Console showed decent impressions for branded terms but a low click-through rate and weak average position on category and informational queries, signaling a metadata and intent-match gap.</div>
-        <div class="popup-img-wrap" data-caption="Step 02 — Search Performance Audit: Low CTR & Average Position Analysis">
-          <img src="shabbir-gsc-ctr-position.png" alt="Google Search Console Low CTR and Average Position Report">
-          <div class="img-placeholder"><div class="ph-icon">📊</div><div class="ph-text">Search Performance Audit<br>Low CTR & Average Position</div></div>
-        </div>
+  <div class="audit-step">02 / Technical SEO</div>
+  <span class="audit-emoji">🔍</span>
+
+  <div class="audit-name">Critical Technical SEO Issues Detected</div>
+
+  <div class="audit-desc">
+    The technical SEO audit uncovered multiple crawl and indexing issues, including duplicate title tags, duplicate meta descriptions, missing title tags, missing H1 tags, unoptimized images, sitemap errors, and orphaned pages. These issues reduced crawl efficiency, affected indexability, and limited overall organic search performance.
+  </div>
+
+  <div class="popup-img-wrap" data-caption="Step 02 — Technical SEO Audit: Critical Crawl & Indexing Issues">
+    <img src="shabbir-seo-audit.png" alt="SEMrush Technical SEO Site Audit Report">
+    <div class="img-placeholder">
+      <div class="ph-icon">🔍</div>
+      <div class="ph-text">
+        Technical SEO Audit<br>
+        Crawl & Indexing Issues
       </div>
+    </div>
+  </div>
+</div>
 
       <div class="audit-card fade-up" data-delay="3">
-        <div class="audit-step">03 / Authority</div>
-        <span class="audit-emoji">🔗</span>
-        <div class="audit-name">Low Domain Authority &amp; Thin Backlink Profile</div>
-        <div class="audit-desc">Despite decades of offline trust, the domain had few quality referring domains online — limiting the site's ability to compete against large national pharmacy platforms for competitive medicine keywords.</div>
-        <div class="popup-img-wrap" data-caption="Step 03 — Authority Audit: Domain Authority & Backlink Profile Analysis">
-          <img src="shabbir-domain-authority.png" alt="Domain Authority and Backlink Profile Report">
-          <div class="img-placeholder"><div class="ph-icon">🔗</div><div class="ph-text">Authority Audit<br>Domain Authority Report</div></div>
-        </div>
+  <div class="audit-step">03 / Crawl Optimization</div>
+  <span class="audit-emoji">🤖</span>
+
+  <div class="audit-name">Incomplete Robots.txt Configuration</div>
+
+  <div class="audit-desc">
+    The robots.txt file was minimally configured and referenced a non-secure HTTP sitemap URL. It lacked proper crawl directives and optimization, which could reduce crawl efficiency and create indexing inconsistencies for search engines.
+  </div>
+
+  <div class="popup-img-wrap" data-caption="Step 03 — Crawl Optimization Audit: Robots.txt Configuration Issues">
+    <img src="shabbir-robots-audit.png" alt="Robots.txt Configuration Audit">
+    <div class="img-placeholder">
+      <div class="ph-icon">🤖</div>
+      <div class="ph-text">
+        Crawl Optimization Audit<br>
+        Robots.txt Configuration
       </div>
+    </div>
+  </div>
+</div>
 
       <div class="audit-card fade-up" data-delay="4">
         <div class="audit-step">04 / Indexing</div>
@@ -522,31 +555,133 @@ footer{border-top:1px solid var(--border);padding:28px;position:relative;z-index
         </div>
       </div>
 
-      <div class="audit-card fade-up" data-delay="5">
-        <div class="audit-step">05 / Structured Data</div>
-        <span class="audit-emoji">🏷️</span>
-        <div class="audit-name">Missing Pharmacy &amp; Product Schema</div>
-        <div class="audit-desc">Most product, category, and FAQ pages lacked structured data. Key schemas such as LocalBusiness/Pharmacy, Product, Review, and FAQ were missing or incomplete, suppressing rich results in search.</div>
-        <div class="popup-img-wrap" data-caption="Step 05 — Structured Data Audit: Missing Schema Markup Analysis">
-          <img src="shabbir-schema-audit.png" alt="Schema Markup Validation Report">
-          <div class="img-placeholder"><div class="ph-icon">🏷️</div><div class="ph-text">Structured Data Audit<br>Missing Schema Markup</div></div>
-        </div>
-      </div>
+      <div class="audit-card fade-up" data-delay="4">
+  <div class="audit-step">04 / Google Merchant Center</div>
+  <span class="audit-emoji">🛒</span>
 
-      <div class="audit-card fade-up" data-delay="6">
-        <div class="audit-step">06 / Local SEO</div>
-        <span class="audit-emoji">📍</span>
-        <div class="audit-name">Weak Local &amp; "Near Me" Search Signals</div>
-        <div class="audit-desc">Despite being a long-standing Hyderabad landmark pharmacy, Google Business Profile optimization, NAP consistency, and local review strategy were underdeveloped — losing visibility on "pharmacy near me" and "chemist in Hyderabad" searches.</div>
-        <div class="popup-img-wrap" data-caption="Step 06 — Local SEO Audit: weak Hyderabad geo & near-me signals">
-          <img src="shabbir-local-audit.png" alt="Local SEO audit screenshot">
-          <div class="img-placeholder"><div class="ph-icon">📍</div><div class="ph-text">Local SEO Audit<br>Weak Near-Me Signals · Hyderabad</div></div>
-        </div>
-      </div>
+  <div class="audit-name">Products Not Visible in Google Shopping</div>
 
+  <div class="audit-desc">
+    Products were not appearing in Google Shopping due to the absence of a properly configured Google Merchant Center feed. This limited product visibility across Google's shopping surfaces and reduced opportunities for organic product discovery.
+  </div>
+
+  <div class="popup-img-wrap" data-caption="Step 04 — Google Merchant Center Audit: Products Not Visible in Google Shopping">
+    <img src="shabbir-merchant-center-audit.png" alt="Google Shopping Visibility Audit">
+    <div class="img-placeholder">
+      <div class="ph-icon">🛒</div>
+      <div class="ph-text">
+        Google Merchant Center Audit<br>
+        Products Not Visible
+      </div>
     </div>
   </div>
-</section>
+</div>
+
+     <div class="audit-card fade-up" data-delay="5">
+  <div class="audit-step">05 / Search Performance</div>
+  <span class="audit-emoji">📉</span>
+
+  <div class="audit-name">Low Organic CTR & Average Ranking Position</div>
+
+  <div class="audit-desc">
+    Google Search Console showed low organic click-through rates (CTR) and an average ranking position outside the top search results. Although impressions were growing, poor keyword rankings and unoptimized metadata limited organic traffic and user engagement.
+  </div>
+
+  <div class="popup-img-wrap" data-caption="Step 05 — Google Search Console Audit: Low CTR & Average Position">
+    <img src="shabbir-gsc-performance.png" alt="Google Search Console Performance Report">
+    <div class="img-placeholder">
+      <div class="ph-icon">📉</div>
+      <div class="ph-text">
+        Search Performance Audit<br>
+        Low CTR & Rankings
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="audit-card fade-up" data-delay="6">
+  <div class="audit-step">06 / Keyword Rankings</div>
+  <span class="audit-emoji">📊</span>
+
+  <div class="audit-name">Limited Organic Keyword Visibility</div>
+
+  <div class="audit-desc">
+    SEMrush Position Tracking revealed low keyword visibility, with only a few keywords ranking in the Top 3 and Top 10 positions. Most target keywords lacked strong search visibility, reducing the site's ability to generate consistent organic traffic.
+  </div>
+
+  <div class="popup-img-wrap" data-caption="Step 06 — Keyword Ranking Audit: Limited Organic Visibility">
+    <img src="shabbir-keyword-ranking.png" alt="SEMrush Keyword Ranking Report">
+    <div class="img-placeholder">
+      <div class="ph-icon">📊</div>
+      <div class="ph-text">
+        Keyword Ranking Audit<br>
+        Low Organic Visibility
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="audit-card fade-up" data-delay="7">
+  <div class="audit-step">07 / Indexing</div>
+  <span class="audit-emoji">📑</span>
+
+  <div class="audit-name">High Number of Non-Indexed Pages</div>
+
+  <div class="audit-desc">
+    Google Search Console identified thousands of pages that were not indexed due to redirects, duplicate canonicals, crawl issues, soft 404s, and "Crawled – Currently Not Indexed" status. These indexing problems reduced search visibility and crawl efficiency.
+  </div>
+
+  <div class="popup-img-wrap" data-caption="Step 07 — Indexing Audit: Crawl & Index Coverage Issues">
+    <img src="shabbir-indexing-audit.png" alt="Google Search Console Index Coverage Report">
+    <div class="img-placeholder">
+      <div class="ph-icon">📑</div>
+      <div class="ph-text">
+        Index Coverage Audit<br>
+        Non-Indexed Pages
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="audit-card fade-up" data-delay="8">
+  <div class="audit-step">08 / GEO</div>
+  <span class="audit-emoji">🤖</span>
+
+  <div class="audit-name">No AI Search Visibility & Brand Mentions</div>
+
+  <div class="audit-desc">
+    The GEO audit showed zero brand mentions across major AI search platforms. The website lacked AI-optimized content, structured entities, and citation signals, resulting in no measurable visibility within AI-generated search responses.
+  </div>
+
+  <div class="popup-img-wrap" data-caption="Step 08 — GEO Audit: AI Search Visibility Analysis">
+    <img src="shabbir-geo-audit.png" alt="Generative Engine Optimization Audit">
+    <div class="img-placeholder">
+      <div class="ph-icon">🤖</div>
+      <div class="ph-text">
+        GEO Audit<br>
+        AI Search Visibility
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="audit-card fade-up" data-delay="9">
+  <div class="audit-step">09 / Authority</div>
+  <span class="audit-emoji">🔗</span>
+
+  <div class="audit-name">Low Domain Authority & Backlink Strength</div>
+
+  <div class="audit-desc">
+    The website had a Domain Authority of 10 with limited ranking keywords and relatively weak backlink authority. Additional high-quality backlinks and stronger topical authority were required to improve trust, rankings, and overall organic performance.
+  </div>
+
+  <div class="popup-img-wrap" data-caption="Step 09 — Authority Audit: Domain Authority & Backlink Analysis">
+    <img src="shabbir-domain-authority.png" alt="Domain Authority Report">
+    <div class="img-placeholder">
+      <div class="ph-icon">🔗</div>
+      <div class="ph-text">
+        Authority Audit<br>
+        Domain Strength
+      </div>
+    </div>
+  </div>
+</div>
 
 <!-- ============================================================ STRATEGY -->
 <section class="section" id="strategy">
