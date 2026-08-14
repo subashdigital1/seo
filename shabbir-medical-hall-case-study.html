@@ -116,6 +116,28 @@ body::before{content:'';position:fixed;inset:0;z-index:1;pointer-events:none;bac
 .b-dot.r{background:#ff5f57}.b-dot.y{background:#febc2e}.b-dot.g{background:#28c840}
 .b-url{flex:1;text-align:center;font-family:var(--font-mono);font-size:11px;color:var(--t3)}
 
+/* YOUTUBE-STYLE VIDEO THUMBNAIL */
+.yt-thumb{position:relative;cursor:pointer;overflow:hidden;border-radius:0 0 18px 18px;display:block}
+.yt-thumb-img{width:100%;height:auto;display:block;border-radius:0 0 18px 18px;transition:transform 0.4s var(--ease)}
+.yt-thumb-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.6),rgba(0,0,0,0) 42%);opacity:0.65;transition:opacity 0.3s var(--ease);pointer-events:none}
+.yt-play-btn{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%) scale(1);width:78px;height:55px;background:none;border:none;padding:0;display:flex;align-items:center;justify-content:center;filter:drop-shadow(0 8px 26px rgba(0,0,0,0.55));transition:transform 0.25s var(--ease-spring);pointer-events:none}
+.yt-play-btn svg{width:100%;height:100%}
+.yt-thumb:hover .yt-play-btn{transform:translate(-50%,-50%) scale(1.1)}
+.yt-thumb:hover .yt-thumb-img{transform:scale(1.04)}
+.yt-thumb:hover .yt-thumb-overlay{opacity:0.85}
+.yt-watch-label{position:absolute;left:16px;bottom:14px;font-family:var(--font-mono);font-size:10px;font-weight:600;letter-spacing:0.1em;color:#fff;background:rgba(0,0,0,0.55);border:1px solid rgba(0,229,255,0.3);padding:6px 12px;border-radius:6px;backdrop-filter:blur(4px)}
+.yt-thumb:focus-visible{outline:2px solid var(--cyan);outline-offset:2px}
+.yt-thumb .img-placeholder{position:relative;z-index:0}
+
+/* VIDEO MODAL */
+#videoModal{display:none;position:fixed;inset:0;z-index:99999;background:rgba(0,0,0,0.92);backdrop-filter:blur(14px);align-items:center;justify-content:center;padding:24px}
+#videoModal.active{display:flex;animation:overlayIn 0.22s ease forwards}
+.video-modal-inner{position:relative;width:100%;max-width:960px;animation:boxIn 0.35s cubic-bezier(0.34,1.56,0.64,1) forwards}
+.video-modal-aspect{position:relative;width:100%;padding-top:56.25%;border-radius:14px;overflow:hidden;background:#000;box-shadow:0 40px 100px rgba(0,0,0,0.9),0 0 60px rgba(0,229,255,0.1);border:1px solid rgba(0,229,255,0.25)}
+.video-modal-aspect iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+#videoModalClose{position:absolute;top:-18px;right:-18px;width:42px;height:42px;border-radius:50%;background:#192030;border:1px solid rgba(0,229,255,0.30);color:rgba(255,255,255,0.85);font-size:1.25rem;display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:2;transition:background 0.2s,color 0.2s,transform 0.25s;box-shadow:0 4px 20px rgba(0,0,0,0.6);line-height:1;padding:0}
+#videoModalClose:hover{background:#00e5ff;color:#08090d;border-color:#00e5ff;transform:rotate(90deg) scale(1.15)}
+
 /* STATS */
 .stats-strip{border-top:1px solid var(--border);border-bottom:1px solid var(--border);background:var(--bg2);position:relative;z-index:2}
 .stats-inner{max-width:1220px;margin:0 auto;padding:0 28px;display:grid;grid-template-columns:repeat(4,1fr)}
@@ -334,6 +356,14 @@ footer{border-top:1px solid var(--border);padding:28px;position:relative;z-index
 </div>
 </div>
 
+<!-- VIDEO POPUP MODAL -->
+<div id="videoModal" role="dialog" aria-modal="true" aria-label="SEO report video player">
+<div class="video-modal-inner" id="videoModalInner">
+<button id="videoModalClose" aria-label="Close video">&#x2715;</button>
+<div class="video-modal-aspect" id="videoModalAspect"></div>
+</div>
+</div>
+
 <!-- NAVIGATION -->
 <nav class="nav" id="mainNav">
 <div class="nav-inner">
@@ -386,12 +416,18 @@ via Technical &amp; Local Pharmacy SEO
 <div class="b-dot g"></div>
 <span class="b-url">shabbirmedicalhall.com · Google Search Console</span>
 </div>
-<div class="popup-img-wrap" data-caption="Google Search Console Dashboard — Shabbir Medical Hall">
-<img src="smh-dashboard.png" alt="Google Search Console Dashboard" style="width:100%;height:auto;display:block;border-radius:0 0 18px 18px;">
+<div class="yt-thumb" id="gscVideoThumb" data-video-id="7U1a0agbzQE" tabindex="0" role="button" aria-label="Play Google Search Console SEO report video">
+<img src="smh-dashboard.png" alt="Google Search Console Dashboard" class="yt-thumb-img">
 <div class="img-placeholder" style="border-radius:0 0 18px 18px">
 <div class="ph-icon">📈</div>
-<div class="ph-text">Search Console Dashboard<br>Add screenshot: shabbir-dashboard.png</div>
+<div class="ph-text">Search Console Dashboard<br>Add screenshot: smh-dashboard.png</div>
 </div>
+<div class="yt-thumb-overlay"></div>
+<button class="yt-play-btn" tabindex="-1" aria-hidden="true">
+<svg viewBox="0 0 68 48"><path d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24 S67.94,13.05,66.52,7.74z" fill="#ff0000"></path><path d="M 45,24 27,14 27,34" fill="#fff"></path>
+</svg>
+</button>
+<span class="yt-watch-label">▶ WATCH SEO REPORT</span>
 </div>
 </div>
 </div>
@@ -1387,7 +1423,59 @@ img.addEventListener('error', showPh);
 if (img.complete && img.naturalWidth === 0) showPh();
 });
 
-/* ---- Universal Lightbox ---- */
+/* ---- YouTube-style video thumbnail (Google Search Console) ---- */
+(function () {
+var thumb = document.getElementById('gscVideoThumb');
+if (!thumb) return;
+
+/* broken-image fallback, same behavior as .popup-img-wrap cards */
+var thumbImg = thumb.querySelector('.yt-thumb-img');
+var thumbPh  = thumb.querySelector('.img-placeholder');
+if (thumbImg && thumbPh) {
+function showThumbPh() { thumbImg.style.display = 'none'; thumbPh.style.display = 'flex'; }
+thumbImg.addEventListener('error', showThumbPh);
+if (thumbImg.complete && thumbImg.naturalWidth === 0) showThumbPh();
+}
+
+var modal     = document.getElementById('videoModal');
+var innerBox  = document.getElementById('videoModalInner');
+var aspectBox = document.getElementById('videoModalAspect');
+var closeBtn  = document.getElementById('videoModalClose');
+var videoId   = thumb.getAttribute('data-video-id');
+
+function openVideo() {
+var iframe = document.createElement('iframe');
+iframe.src = 'https://www.youtube.com/embed/' + videoId + '?autoplay=1&rel=0&modestbranding=1';
+iframe.title = 'Google Search Console SEO report video';
+iframe.setAttribute('frameborder', '0');
+iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture');
+iframe.setAttribute('allowfullscreen', '');
+aspectBox.innerHTML = '';
+aspectBox.appendChild(iframe);
+modal.classList.add('active');
+document.body.style.overflow = 'hidden';
+setTimeout(function () { closeBtn.focus(); }, 50);
+}
+
+function closeVideo() {
+modal.classList.remove('active');
+document.body.style.overflow = '';
+/* stop playback completely by clearing the iframe after the close animation */
+setTimeout(function () { aspectBox.innerHTML = ''; }, 260);
+}
+
+thumb.addEventListener('click', openVideo);
+thumb.addEventListener('keydown', function (e) {
+if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openVideo(); }
+});
+closeBtn.addEventListener('click', closeVideo);
+modal.addEventListener('click', function (e) { if (!innerBox.contains(e.target)) closeVideo(); });
+document.addEventListener('keydown', function (e) {
+if (e.key === 'Escape' && modal.classList.contains('active')) closeVideo();
+});
+})();
+
+/* ---- Universal Lightbox (images) ---- */
 (function () {
 var overlay  = document.getElementById('imgPopup');
 var inner    = document.getElementById('popupInner');
