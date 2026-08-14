@@ -116,6 +116,22 @@ body::before{content:'';position:fixed;inset:0;z-index:1;pointer-events:none;bac
 .b-dot.r{background:#ff5f57}.b-dot.y{background:#febc2e}.b-dot.g{background:#28c840}
 .b-url{flex:1;text-align:center;font-family:var(--font-mono);font-size:11px;color:var(--t3)}
 
+/* VIDEO PREVIEW (replaces static GSC screenshot) */
+.video-preview{position:relative;display:block;overflow:hidden;border-radius:0 0 18px 18px;background:linear-gradient(135deg,#0e1118,#131720);cursor:pointer;aspect-ratio:16/10}
+.video-preview img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.45s var(--ease)}
+.video-preview::before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0.08) 0%,rgba(0,0,0,0.15) 55%,rgba(0,0,0,0.45) 100%);transition:background 0.3s var(--ease);z-index:1}
+.video-preview:hover img{transform:scale(1.05)}
+.video-preview:hover::before{background:linear-gradient(180deg,rgba(0,0,0,0.15) 0%,rgba(0,0,0,0.2) 55%,rgba(0,0,0,0.55) 100%)}
+.video-play-pulse{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:76px;height:76px;border-radius:50%;background:rgba(0,229,255,0.45);animation:videoPulse 2.6s ease-out infinite;z-index:1}
+@keyframes videoPulse{0%{transform:translate(-50%,-50%) scale(0.9);opacity:0.55}100%{transform:translate(-50%,-50%) scale(1.9);opacity:0}}
+.video-play-btn{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:74px;height:74px;border-radius:50%;background:var(--cyan);display:flex;align-items:center;justify-content:center;box-shadow:0 12px 40px rgba(0,0,0,0.55),0 0 0 6px rgba(0,229,255,0.12);transition:all 0.3s var(--ease-spring);z-index:2}
+.video-preview:hover .video-play-btn{transform:translate(-50%,-50%) scale(1.1);box-shadow:0 16px 50px rgba(0,0,0,0.6),0 0 0 10px rgba(0,229,255,0.16)}
+.video-play-btn svg{width:26px;height:26px;margin-left:4px;fill:#08090d}
+.video-label-tag{position:absolute;bottom:14px;left:14px;display:flex;align-items:center;gap:7px;background:rgba(8,9,13,0.78);backdrop-filter:blur(8px);border:1px solid rgba(0,229,255,0.25);border-radius:100px;padding:6px 14px 6px 10px;font-family:var(--font-mono);font-size:10px;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;color:var(--cyan);z-index:2}
+.video-label-tag .rec-dot{width:6px;height:6px;border-radius:50%;background:var(--red);animation:pulse 1.6s infinite;flex-shrink:0}
+.video-duration-tag{position:absolute;bottom:14px;right:14px;background:rgba(8,9,13,0.78);backdrop-filter:blur(8px);border:1px solid var(--border2);border-radius:6px;padding:5px 10px;font-family:var(--font-mono);font-size:10px;font-weight:500;color:var(--t1);z-index:2}
+@media(max-width:480px){.video-play-btn,.video-play-pulse{width:56px;height:56px}.video-play-btn svg{width:20px;height:20px}}
+
 /* STATS */
 .stats-strip{border-top:1px solid var(--border);border-bottom:1px solid var(--border);background:var(--bg2);position:relative;z-index:2}
 .stats-inner{max-width:1220px;margin:0 auto;padding:0 28px;display:grid;grid-template-columns:repeat(4,1fr)}
@@ -384,9 +400,14 @@ footer{border-top:1px solid var(--border);padding:28px;position:relative;z-index
           <div class="b-dot g"></div>
           <span class="b-url">Google Search Console · Performance Dashboard</span>
         </div>
-        <div style="line-height:0">
-          <img src="mindgee-dashboard-gsc.png" alt="Google Search Console Dashboard" style="width:100%;height:auto;display:block;border-radius:0 0 18px 18px;">
-        </div>
+        <a href="https://www.youtube.com/watch?v=YOUR_VIDEO_ID" target="_blank" rel="noopener noreferrer" class="video-preview" aria-label="Watch the Google Search Console performance walkthrough video on YouTube">
+          <img src="mindgee-dashboard-gsc-video-thumb.jpg" alt="Google Search Console Performance Dashboard video preview" onerror="this.style.display='none'">
+          <div class="video-play-pulse"></div>
+          <div class="video-play-btn">
+            <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          </div>
+          <span class="video-label-tag"><span class="rec-dot"></span> Watch Walkthrough</span>
+        </a>
       </div>
     </div>
   </div>
