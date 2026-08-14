@@ -116,6 +116,28 @@ body::before{content:'';position:fixed;inset:0;z-index:1;pointer-events:none;bac
 .b-dot.r{background:#ff5f57}.b-dot.y{background:#febc2e}.b-dot.g{background:#28c840}
 .b-url{flex:1;text-align:center;font-family:var(--font-mono);font-size:11px;color:var(--t3)}
 
+/* YOUTUBE THUMBNAIL STYLE FOR HERO VIDEO */
+.yt-thumb-wrap{position:relative;border-radius:0 0 18px 18px;overflow:hidden;cursor:pointer;display:block}
+.yt-thumb-wrap img{width:100%;height:auto;display:block;border-radius:0 0 18px 18px;transition:transform 0.4s var(--ease)}
+.yt-thumb-wrap:hover img{transform:scale(1.03)}
+.yt-thumb-wrap::before{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.55) 0%,rgba(0,0,0,0.05) 35%,rgba(0,0,0,0.15) 100%);transition:background 0.3s var(--ease);pointer-events:none}
+.yt-thumb-wrap:hover::before{background:linear-gradient(to top,rgba(0,0,0,0.65) 0%,rgba(0,0,0,0.1) 35%,rgba(0,0,0,0.25) 100%)}
+.yt-play-btn{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:78px;height:56px;background:#ff0000;border-radius:16px;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(0,0,0,0.5);transition:transform 0.25s var(--ease-spring),background 0.2s var(--ease);pointer-events:none}
+.yt-thumb-wrap:hover .yt-play-btn{transform:translate(-50%,-50%) scale(1.08);background:#ff1a1a}
+.yt-play-btn::after{content:'';border-style:solid;border-width:12px 0 12px 20px;border-color:transparent transparent transparent #fff;margin-left:5px}
+.yt-watch-label{position:absolute;left:16px;bottom:16px;display:flex;align-items:center;gap:8px;font-family:var(--font-mono);font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:#fff;background:rgba(0,0,0,0.5);border:1px solid rgba(255,255,255,0.15);padding:6px 12px;border-radius:8px;backdrop-filter:blur(6px);pointer-events:none}
+.yt-watch-label .yt-dot{width:7px;height:7px;border-radius:50%;background:#ff0000;animation:pulse 2s infinite}
+
+/* VIDEO MODAL */
+#videoModal{display:none;position:fixed;inset:0;z-index:99999;background:rgba(0,0,0,0.9);backdrop-filter:blur(14px);align-items:center;justify-content:center;padding:24px}
+#videoModal.active{display:flex;animation:overlayIn 0.22s ease forwards}
+.video-modal-inner{position:relative;width:100%;max-width:960px;animation:boxIn 0.35s cubic-bezier(0.34,1.56,0.64,1) forwards}
+.video-modal-frame{position:relative;width:100%;padding-top:56.25%;border-radius:14px;overflow:hidden;box-shadow:0 40px 100px rgba(0,0,0,0.9),0 0 60px rgba(0,229,255,0.08);border:1px solid rgba(0,229,255,0.25)}
+.video-modal-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+#videoModalClose{position:absolute;top:-18px;right:-18px;width:42px;height:42px;border-radius:50%;background:#192030;border:1px solid rgba(0,229,255,0.30);color:rgba(255,255,255,0.85);font-size:1.25rem;display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:2;transition:background 0.2s,color 0.2s,transform 0.25s;box-shadow:0 4px 20px rgba(0,0,0,0.6);line-height:1;padding:0}
+#videoModalClose:hover{background:#00e5ff;color:#08090d;border-color:#00e5ff;transform:rotate(90deg) scale(1.15)}
+@media(max-width:600px){#videoModalClose{top:-14px;right:-14px;width:36px;height:36px;font-size:1.1rem}}
+
 /* STATS */
 .stats-strip{border-top:1px solid var(--border);border-bottom:1px solid var(--border);background:var(--bg2);position:relative;z-index:2}
 .stats-inner{max-width:1220px;margin:0 auto;padding:0 28px;display:grid;grid-template-columns:repeat(4,1fr)}
@@ -329,6 +351,16 @@ footer{border-top:1px solid var(--border);padding:28px;position:relative;z-index
   </div>
 </div>
 
+<!-- VIDEO POPUP MODAL -->
+<div id="videoModal" role="dialog" aria-modal="true" aria-label="SEO report video">
+  <div class="video-modal-inner">
+    <button id="videoModalClose" aria-label="Close video">&#x2715;</button>
+    <div class="video-modal-frame">
+      <iframe id="videoModalIframe" src="" title="SEO Report Video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+  </div>
+</div>
+
 <!-- NAVIGATION -->
 <nav class="nav" id="mainNav">
   <div class="nav-inner">
@@ -381,8 +413,10 @@ footer{border-top:1px solid var(--border);padding:28px;position:relative;z-index
           <div class="b-dot g"></div>
           <span class="b-url">Google Search Console · Performance Dashboard</span>
         </div>
-        <div style="line-height:0">
-          <img src="express Dashboard Screen shoot.png" alt="Google Search Console Dashboard" style="width:100%;height:auto;display:block;border-radius:0 0 18px 18px;">
+        <div class="yt-thumb-wrap" id="gscVideoThumb" data-yt-id="JC9lSEABJ9w" tabindex="0" role="button" aria-label="Play Google Search Console SEO report video">
+          <img src="express Dashboard Screen shoot.png" alt="Google Search Console Dashboard">
+          <div class="yt-play-btn"></div>
+          <div class="yt-watch-label"><span class="yt-dot"></span> Watch SEO Report</div>
         </div>
       </div>
     </div>
@@ -902,7 +936,7 @@ footer{border-top:1px solid var(--border);padding:28px;position:relative;z-index
           <h3>Phase 6 — Link Building &amp; Authority Growth</h3>
           <div class="task-tags">
             <span class="task-tag">Backlink outreach campaign</span>
-            <span class="task-tag">Guest posting &amp; niche links</span
+            <span class="task-tag">Guest posting &amp; niche links</span>
             <span class="task-tag">Local citations &amp; trust signals</span>
             <span class="task-tag">High-performing content expansion</span>
             <span class="task-tag">Rankings &amp; keyword growth tracking</span>
@@ -1242,6 +1276,7 @@ document.querySelectorAll('.popup-img-wrap').forEach(function(wrap) {
   document.querySelectorAll('.popup-img-wrap').forEach(function(wrap) {
     var img = wrap.querySelector('img');
     if (!img || img.id === 'popupImg') return;
+    if (wrap.id === 'gscVideoThumb') return;
     wrap.setAttribute('tabindex', '0');
     wrap.addEventListener('click', function(e) { e.stopPropagation(); openPopup(img); });
     wrap.addEventListener('keydown', function(e) {
@@ -1253,6 +1288,39 @@ document.querySelectorAll('.popup-img-wrap').forEach(function(wrap) {
   overlay.addEventListener('click', function(e) { if (!inner.contains(e.target)) closePopup(); });
   document.addEventListener('keydown', function(e) {
     if (e.key === 'Escape' && overlay.classList.contains('active')) closePopup();
+  });
+})();
+
+/* ---- YouTube Video Modal (Google Search Console thumbnail) ---- */
+(function () {
+  var thumb    = document.getElementById('gscVideoThumb');
+  var modal    = document.getElementById('videoModal');
+  var iframe   = document.getElementById('videoModalIframe');
+  var closeBtn = document.getElementById('videoModalClose');
+  if (!thumb || !modal) return;
+
+  function openVideo() {
+    var ytId = thumb.getAttribute('data-yt-id');
+    iframe.src = 'https://www.youtube.com/embed/' + ytId + '?autoplay=1&rel=0';
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+    setTimeout(function () { closeBtn.focus(); }, 50);
+  }
+  function closeVideo() {
+    modal.classList.remove('active');
+    document.body.style.overflow = '';
+    iframe.src = '';
+  }
+  thumb.addEventListener('click', openVideo);
+  thumb.addEventListener('keydown', function(e) {
+    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openVideo(); }
+  });
+  closeBtn.addEventListener('click', closeVideo);
+  modal.addEventListener('click', function(e) {
+    if (!e.target.closest('.video-modal-inner')) closeVideo();
+  });
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && modal.classList.contains('active')) closeVideo();
   });
 })();
 </script>
