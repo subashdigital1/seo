@@ -117,7 +117,7 @@ body::before{content:'';position:fixed;inset:0;z-index:1;pointer-events:none;bac
 .b-url{flex:1;text-align:center;font-family:var(--font-mono);font-size:11px;color:var(--t3)}
 
 /* VIDEO PREVIEW (replaces static GSC screenshot) */
-.video-preview{position:relative;display:block;overflow:hidden;border-radius:0 0 18px 18px;background:linear-gradient(135deg,#0e1118,#131720);cursor:pointer;aspect-ratio:16/10}
+.video-preview{position:relative;display:block;overflow:hidden;border-radius:0 0 18px 18px;background:linear-gradient(135deg,#0e1118,#131720);cursor:pointer;aspect-ratio:16/10;width:100%;border:none;padding:0;text-align:left}
 .video-preview img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.45s var(--ease)}
 .video-preview::before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0.08) 0%,rgba(0,0,0,0.15) 55%,rgba(0,0,0,0.45) 100%);transition:background 0.3s var(--ease);z-index:1}
 .video-preview:hover img{transform:scale(1.05)}
@@ -131,6 +131,24 @@ body::before{content:'';position:fixed;inset:0;z-index:1;pointer-events:none;bac
 .video-label-tag .rec-dot{width:6px;height:6px;border-radius:50%;background:var(--red);animation:pulse 1.6s infinite;flex-shrink:0}
 .video-duration-tag{position:absolute;bottom:14px;right:14px;background:rgba(8,9,13,0.78);backdrop-filter:blur(8px);border:1px solid var(--border2);border-radius:6px;padding:5px 10px;font-family:var(--font-mono);font-size:10px;font-weight:500;color:var(--t1);z-index:2}
 @media(max-width:480px){.video-play-btn,.video-play-pulse{width:56px;height:56px}.video-play-btn svg{width:20px;height:20px}}
+
+/* VIDEO MODAL (YouTube popup) */
+#videoPopup{display:none;position:fixed;top:0;left:0;right:0;bottom:0;z-index:99999;background:rgba(4,5,8,0.94);backdrop-filter:blur(16px);align-items:center;justify-content:center;padding:24px}
+#videoPopup.active{display:flex;animation:videoOverlayIn 0.25s ease forwards}
+@keyframes videoOverlayIn{from{opacity:0}to{opacity:1}}
+.video-popup-inner{position:relative;width:min(94vw,1100px);animation:videoBoxIn 0.35s cubic-bezier(0.34,1.56,0.64,1) forwards}
+@keyframes videoBoxIn{from{opacity:0;transform:scale(0.86) translateY(24px)}to{opacity:1;transform:scale(1) translateY(0)}}
+.video-popup-inner.closing{animation:videoBoxOut 0.22s var(--ease) forwards}
+@keyframes videoBoxOut{from{opacity:1;transform:scale(1) translateY(0)}to{opacity:0;transform:scale(0.9) translateY(14px)}}
+.video-frame-wrap{position:relative;width:100%;aspect-ratio:16/9;border-radius:16px;overflow:hidden;background:#000;border:1px solid rgba(0,229,255,0.28);box-shadow:0 0 0 1px rgba(0,229,255,0.08),0 40px 120px rgba(0,0,0,0.9),0 0 90px rgba(0,229,255,0.12)}
+.video-frame-wrap iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+#videoPopupClose{position:absolute;top:-18px;right:-18px;width:42px;height:42px;border-radius:50%;background:#192030;border:1px solid rgba(0,229,255,0.30);color:rgba(255,255,255,0.85);font-size:1.25rem;display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:2;transition:background 0.2s,color 0.2s,transform 0.25s;box-shadow:0 4px 20px rgba(0,0,0,0.6);line-height:1;padding:0}
+#videoPopupClose:hover{background:#00e5ff;color:#08090d;border-color:#00e5ff;transform:rotate(90deg) scale(1.15)}
+.video-popup-esc{margin-top:14px;text-align:center;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.20)}
+@media(max-width:600px){
+  #videoPopup{padding:12px}
+  #videoPopupClose{top:-14px;right:0;width:36px;height:36px;font-size:1.1rem}
+}
 
 /* STATS */
 .stats-strip{border-top:1px solid var(--border);border-bottom:1px solid var(--border);background:var(--bg2);position:relative;z-index:2}
@@ -350,6 +368,19 @@ footer{border-top:1px solid var(--border);padding:28px;position:relative;z-index
   </div>
 </div>
 
+<!-- VIDEO POPUP MODAL -->
+<div id="videoPopup" role="dialog" aria-modal="true" aria-label="Video player">
+  <div class="video-popup-inner" id="videoPopupInner">
+    <button id="videoPopupClose" aria-label="Close video">&#x2715;</button>
+    <div class="video-frame-wrap">
+      <iframe id="videoPopupFrame" src="" title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen></iframe>
+    </div>
+    <div class="video-popup-esc">Press ESC or click outside to close</div>
+  </div>
+</div>
+
 <!-- NAVIGATION -->
 <nav class="nav" id="mainNav">
   <div class="nav-inner">
@@ -400,14 +431,14 @@ footer{border-top:1px solid var(--border);padding:28px;position:relative;z-index
           <div class="b-dot g"></div>
           <span class="b-url">Google Search Console · Performance Dashboard</span>
         </div>
-        <a href="https://www.youtube.com/watch?v=YOUR_VIDEO_ID" target="_blank" rel="noopener noreferrer" class="video-preview" aria-label="Watch the Google Search Console performance walkthrough video on YouTube">
+        <button type="button" class="video-preview" id="gscVideoTrigger" data-video-id="JC9lSEABJ9w" aria-haspopup="dialog" aria-label="Watch the Google Search Console performance walkthrough video">
           <img src="mindgee-dashboard-gsc-video-thumb.jpg" alt="Google Search Console Performance Dashboard video preview" onerror="this.style.display='none'">
           <div class="video-play-pulse"></div>
           <div class="video-play-btn">
             <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
           </div>
           <span class="video-label-tag"><span class="rec-dot"></span> Watch Walkthrough</span>
-        </a>
+        </button>
       </div>
     </div>
   </div>
@@ -1054,7 +1085,7 @@ document.querySelectorAll('.popup-img-wrap').forEach(function(wrap) {
   if (img.complete && img.naturalWidth === 0) showPh();
 });
 
-/* ---- Universal Lightbox ---- */
+/* ---- Universal Lightbox (images) ---- */
 (function () {
   var overlay  = document.getElementById('imgPopup');
   var inner    = document.getElementById('popupInner');
@@ -1106,6 +1137,52 @@ document.querySelectorAll('.popup-img-wrap').forEach(function(wrap) {
   overlay.addEventListener('click', function(e) { if (!inner.contains(e.target)) closePopup(); });
   document.addEventListener('keydown', function(e) {
     if (e.key === 'Escape' && overlay.classList.contains('active')) closePopup();
+  });
+})();
+
+/* ---- YouTube Video Popup ---- */
+(function () {
+  var trigger   = document.getElementById('gscVideoTrigger');
+  var overlay   = document.getElementById('videoPopup');
+  var inner     = document.getElementById('videoPopupInner');
+  var frame     = document.getElementById('videoPopupFrame');
+  var closeBtn  = document.getElementById('videoPopupClose');
+  if (!trigger || !overlay) return;
+
+  var videoId = trigger.getAttribute('data-video-id') || '';
+  var isOpen = false;
+
+  function openVideoPopup() {
+    if (isOpen) return;
+    isOpen = true;
+    inner.classList.remove('closing');
+    frame.src = 'https://www.youtube-nocookie.com/embed/' + videoId +
+      '?autoplay=1&rel=0&modestbranding=1&playsinline=1';
+    overlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+    setTimeout(function () { closeBtn.focus(); }, 60);
+  }
+
+  function closeVideoPopup() {
+    if (!isOpen) return;
+    inner.classList.add('closing');
+    setTimeout(function () {
+      overlay.classList.remove('active');
+      inner.classList.remove('closing');
+      frame.src = ''; /* stops playback */
+      document.body.style.overflow = '';
+      isOpen = false;
+      trigger.focus();
+    }, 200);
+  }
+
+  trigger.addEventListener('click', openVideoPopup);
+  closeBtn.addEventListener('click', closeVideoPopup);
+  overlay.addEventListener('click', function (e) {
+    if (!inner.contains(e.target)) closeVideoPopup();
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && isOpen) closeVideoPopup();
   });
 })();
 </script>
